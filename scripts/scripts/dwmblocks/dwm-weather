@@ -1,0 +1,21 @@
+#!/bin/sh
+
+weatherreport="${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport"
+getforecast() {
+  echo "downloading"
+  curl -sf "wttr.in/?m" > "$weatherreport" || exit 1 ;
+}
+
+showweather() {
+  printf "%s" "$(sed '16q;d' "$weatherreport" | grep -wo "[0-9]*%" | sort -rn | sed "s/^/爫 /g;1q" | tr -d '\n')"
+  sed '13q;d' "$weatherreport" | grep -o "m\\([-+]\\)*[0-9]\\+" | sed 's/+//g' | sort -n -t 'm' -k 2n | sed -e 1b -e '$!d' | tr '\n|m' ' ' | awk '{print " ﰬ " $1 "°C","ﰵ " $2 "°C"}' ;
+}
+
+# if forecast is outdated and the computer is connected download a new weather report
+wifistatus="$(cat /sys/class/net/w*/operstate 2>/dev/null)"
+if [ "$wifistatus" = "up" ]; then
+  [ "$(stat -c %y "$weatherreport" 2>/dev/null | cut -d' ' -f1)" = "$(date '+%Y-%m-%d')" ] || getforecast
+  showweather
+else
+  [ "$(stat -c %y "$weatherreport" 2>/dev/null | cut -d' ' -f1)" = "$(date '+%Y-%m-%d')" ] || echo "no internet"; exit 1
+fi

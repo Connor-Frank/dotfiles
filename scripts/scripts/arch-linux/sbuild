@@ -1,0 +1,18 @@
+#!/bin/sh
+
+echo "building suckless software"
+cd ~/suckless
+for folder in *; do
+  cd $folder
+  pwd
+  echo
+  make
+  sudo make clean install
+  echo
+  cd ..
+done;
+cd
+killall -q dwmblocks;setsid dwmblocks &
+echo "all software has been built and dwmblocks has been restarted"
+echo "press ENTER to exit"
+read junk

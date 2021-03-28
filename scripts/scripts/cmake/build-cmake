@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# build-cmake -- a script by connor frank
+# this shell script is designed to simplify the process of using cmake
+# i modeled its actions on the build process of JetBrains' CLion IDE
+# it should be run from the directory where the source files and CMakeLists.txt can be found
+# this script creates a directory to save the build files (and resultant executable)
+# in runs cmake on the directory where it was called
+# after running, it does not change the working directory in terminal
+
+# this script was last updated on 25 march 2021
+
+# create directory for build files
+mkdir -p cmake-build-files
+# go to that directory
+cd cmake-build-files
+# run cmake on the previous directory and make
+if cmake ..; then
+  make; cd ..
+else
+  cd ..; rm -R cmake-build-files
+fi
+
+# to run the executable, use run-cmake

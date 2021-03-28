@@ -1,0 +1,14 @@
+#!/bin/sh
+
+[ $(pamixer --get-mute) = true ] && echo "婢 off" && exit
+
+vol="$(pamixer --get-volume)"
+
+if [ "$vol" -gt "50" ]; then
+  icon="墳"
+else
+  icon="奔"
+fi
+
+volshow="$(pamixer --get-volume-human)"
+echo "$icon $volshow"

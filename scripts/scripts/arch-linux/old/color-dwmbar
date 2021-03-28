@@ -1,0 +1,38 @@
+#!/bin/sh
+
+dwm_speed_ping () {
+  cat ~/temp/speedtest-result | awk '{print $2}'
+  echo "ping";}
+dwm_speed_down () {
+  cat ~/temp/speedtest-result | awk '{print $5}'
+  echo "down";}
+dwm_speed_up () {
+  cat ~/temp/speedtest-result | awk '{print $8}'
+  echo "up";}
+dwm_sizes () {
+  echo "Root";}
+dwm_package () {
+  cat ~/temp/package-info | awk '{print $0}';}
+dwm_audio () {
+  echo "Audio";
+  pamixer --get-volume-human;}
+dwm_time () {
+  date +"%H:%M:%S";}
+dwm_date () {
+  date +"%d.%m.%Y";}
+
+while true
+  do
+    status="^f-1^"
+    status="$status^b#bf616a^^c#2e3440^ "$(dwm_speed_ping)" "
+    status="$status^b#bf616a^^c#2e3440^ "$(dwm_speed_down)" "
+    status="$status^b#2e3440^^c#bf616a^ "$(dwm_speed_up)" "
+    status="$status^b#ebcb8b^^c#2e3440^ "$(dwm_package)" "
+    status="$status^b#a3be8c^^c#2e3440^ "$(dwm_audio)" "
+    status="$status^b#5e81ac^^c#2e3440^ "$(dwm_time)" "
+    status="$status^b#2e3440^^c#5e81ac^ "$(dwm_date)" "
+    status="$status^f-1^"
+
+    xsetroot -name "$(echo $status)"
+    sleep 1s
+done

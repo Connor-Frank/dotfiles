@@ -1,0 +1,15 @@
+#!/bin/sh
+
+#   🔒  
+w=" cancel\n lock\n suspend\n reboot\n shutdown"
+c=$(echo $w | dmenu -c -p " power" -i -l 5)
+[ "$c" == " cancel" ] && exit
+b=$(printf " no\n yes" | dmenu -c -p " confirm" -i -l 2)
+[ "$b" == " no" ] && exit
+[ -z "$b" ] && exit
+case $c in
+  " lock") slock;;
+  " suspend") systemctl suspend;;
+  " reboot") reboot;;
+  " shutdown") shutdown now;;
+esac;

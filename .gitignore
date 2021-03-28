@@ -1,0 +1,5 @@
+general/.vim/pack
+general/.vim/sessions
+general/.netrwhist
+general/.config/nvim/autoload/plugged
+*.zwc

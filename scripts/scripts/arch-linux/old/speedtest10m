@@ -1,0 +1,6 @@
+#!/bin/sh
+
+while true; do
+  echo $(speedtest --simple) > ~/dwm/temp/speedtest-result
+  sleep 10m
+done

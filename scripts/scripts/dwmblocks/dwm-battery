@@ -1,0 +1,52 @@
+#!/bin/sh
+
+# https://www.nerdfonts.com/cheat-sheet 
+# nf-mdi icons
+
+# loop through all attached batteries and format the info
+for battery in /sys/class/power_supply/BAT?*; do
+  # if non-first battery, print a space separator.
+  [ -n "${capacity+x}" ] && printf " "
+  # sets up the status and capacity
+  case "$(cat "$battery/status")" in
+    "Full") status="" ;;
+    "Discharging") status="" ;;
+    "Charging") status="ﮣ" ;;
+    "Not charging") status="" ;;
+    "Unknown") status="" ;;
+  esac
+  capacity=$(cat "$battery/capacity")
+
+  #makes a warn variable if discharging and low
+  [ "$status" = "" ] && [ "$capacity" -le 25 ] && warn="ﲍ"
+
+  # more specific battery icons
+  if [ "$status" =  "" ]; then
+    if [ "$capacity" -eq 100 ]; then
+      status=""
+    elif [ "$capacity" -ge 90 ]; then
+      status=""
+    elif [ "$capacity" -ge 80 ]; then
+      status=""
+    elif [ "$capacity" -ge 70 ]; then
+      status=""
+    elif [ "$capacity" -ge 60 ]; then
+      status=""
+    elif [ "$capacity" -ge 50 ]; then
+      status=""
+    elif [ "$capacity" -ge 40 ]; then
+      status=""
+    elif [ "$capacity" -ge 30 ]; then
+      status=""
+    elif [ "$capacity" -ge 20 ]; then
+      status=""
+    elif [ "$capacity" -ge 10 ]; then
+      status=""
+    elif [ "$capacity" -ge 0 ]; then
+      status=""
+    fi
+  fi
+
+  # Prints the info
+  printf "%s%s %d%%" "$status" "$warn" "$capacity"; unset warn
+done && exit 0

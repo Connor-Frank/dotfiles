@@ -1,0 +1,12 @@
+#!/bin/sh
+
+while true; do
+  percentage=$(cat /sys/class/power_supply/BAT0/capacity)
+  ac_adapter=$(acpi -a | cut -d' ' -f3 | cut -d- -f1)
+  if [ "$ac_adapter" = "on" ]; then
+    echo "battery: $percentage% (A/C)" > ~/scripts/arch-linux/temp/battery
+  else
+    echo "battery: $percentage%" > ~/scripts/arch-linux/temp/battery
+  fi
+  sleep 15
+done
