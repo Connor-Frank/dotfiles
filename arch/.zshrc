@@ -44,8 +44,8 @@ alias cmatrix='ncmatrix'
 alias upd='sudo reflector --verbose --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist && cat /etc/pacman.d/mirrorlist'
 
 pacdump() {
-  pacgraph -f ~/pacgraph
-  pacman -Qe | cut -d' ' -f1 > ~/pacman-list
+  pacgraph -f ~/dotfiles/package-lists/arch/pacgraph
+  pacman -Qe | cut -d' ' -f1 > ~/dotfiles/package-lists/arch/pacman-list
 }
 
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then

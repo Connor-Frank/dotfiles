@@ -5,6 +5,12 @@ I mainly use Linux (because it's better and I like it much more, especially for 
 
 For shell scripts, I recommend dash. On Arch Linux you can use [dashbinsh](https://aur.archlinux.org/packages/dashbinsh/) to symlink it to `/bin/sh`.
 
+## Attributions
+
+My Neovim config is based on [Chris Chiarulli's](https://github.com/ChristianChiarulli) config, [nvcode](https://github.com/ChristianChiarulli/nvcode). I've made some tweaks here and there and I intend to change more of it eventually, but it's mostly his work for now.
+
+Most of my dwmblocks shell scripts were inspired by (if not copied from) [Luke Smith](https://github.com/LukeSmithxyz). His repo with them is [here](https://github.com/LukeSmithxyz/voidrice/tree/master/.local/bin/statusbar) if you want to check them out.
+
 ## How to install configs
 
 Make sure to clone submodules, otherwise zsh syntax highlighting won't work:
@@ -38,6 +44,6 @@ stow scripts
 
 To add these scripts to my PATH easily, I added the following line to my .xinitrc for Linux:
 ```
-export PATH=$PATH:$(find ${XDG_DATA_HOME:-$HOME/scripts} -maxdepth 1 -type d | paste -sd ":" -)
+export PATH=$PATH:$(find ${XDG_DATA_HOME:-$HOME/dotfiles}/scripts/scripts -maxdepth 1 -type d | paste -sd ":" -)
 ```
 I don't know what the best way to do this on Mac would be, but since I don't use most of those scripts on Mac anyway, I haven't bothered. I only use the cmake scripts on Mac, so I just made aliases to them.

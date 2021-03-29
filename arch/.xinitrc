@@ -5,7 +5,7 @@ export SSH_AUTH_SOCK
 source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
 
 # add scripts to PATH
-export PATH=$PATH:$(find ${XDG_DATA_HOME:-$HOME/scripts} -maxdepth 1 -type d | paste -sd ":" -)
+export PATH=$PATH:$(find ${XDG_DATA_HOME:-$HOME/dotfiles}/scripts/scripts -maxdepth 1 -type d | paste -sd ":" -)
 
 dwmblocks &
 #feh --bg-scale ${XDG_DATA_HOME:-$HOME}/sync/wallpapers/big-sur-low-quality.jpg
