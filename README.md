@@ -3,7 +3,7 @@ My dotfiles. I keep my general (cross-platform) files in [general](general) and 
 
 I mainly use Linux (because it's better and I like it much more, especially for development) but I try to maintain my Mac configuration too.
 
-For shell scripts, I recommend dash. On Arch Linux you can use [dashbinsh](https://www.gnu.org/software/stow/manual/stow.html) to symlink it to `/bin/sh`.
+For shell scripts, I recommend dash. On Arch Linux you can use [dashbinsh](https://aur.archlinux.org/packages/dashbinsh/) to symlink it to `/bin/sh`.
 
 ## How to install configs
 
