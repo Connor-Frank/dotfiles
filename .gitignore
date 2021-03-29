@@ -3,3 +3,4 @@ general/.vim/sessions
 general/.netrwhist
 general/.config/nvim/autoload/plugged
 *.zwc
+.DS_Store

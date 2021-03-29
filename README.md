@@ -7,6 +7,11 @@ For shell scripts, I recommend dash. On Arch Linux you can use [dashbinsh](https
 
 ## How to install configs
 
+Make sure to clone submodules, otherwise zsh syntax highlighting won't work:
+```
+git submodule update --init
+```
+
 I use [GNU stow](https://www.gnu.org/software/stow/manual/stow.html) to make these easy to symlink. General files should be stowed regardless of operating system. 
 
 For Arch Linux:
