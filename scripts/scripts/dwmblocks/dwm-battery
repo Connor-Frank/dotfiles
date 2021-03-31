@@ -9,7 +9,7 @@ for battery in /sys/class/power_supply/BAT?*; do
   [ -n "${capacity+x}" ] && printf " "
   # sets up the status and capacity
   case "$(cat "$battery/status")" in
-    "Full") status="" ;;
+    "Full") status="襤" ;;
     "Discharging") status="" ;;
     "Charging") status="ﮣ" ;;
     "Not charging") status="" ;;

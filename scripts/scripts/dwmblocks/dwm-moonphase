@@ -9,15 +9,15 @@ moonfile="${XDG_DATA_HOME:-$HOME/.local/share}/moonphase"
 icon="$(cat "$moonfile")"
 
 case "$icon" in
-  🌑) name="New" ;;
-  🌒) name="Waxing Crescent" ;;
-  🌓) name="First Quarter" ;;
-  🌔) name="Waxing Gibbous" ;;
-  🌕) name="Full" ;;
-  🌖) name="Waning Gibbous" ;;
-  🌗) name="Last Quarter" ;;
-  🌘) name="Waning Crescent" ;;
-  *) exit 1 ;;
+	🌑) name="New" ; nficon="";;
+	🌒) name="Waxing Crescent" ; nficon="";;
+	🌓) name="First Quarter" ; nficon="";;
+	🌔) name="Waxing Gibbous" ; nficon="";;
+	🌕) name="Full" ; nficon="";;
+	🌖) name="Waning Gibbous" ; nficon="";;
+	🌗) name="Last Quarter" ; nficon="";;
+	🌘) name="Waning Crescent" ; nficon="";;
+	*) exit 1 ;;
 esac
 
-echo "${icon-?}"
+echo "${nficon-?}"

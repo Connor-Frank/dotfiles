@@ -9,6 +9,7 @@ export PATH=$PATH:$(find ${XDG_DATA_HOME:-$HOME/dotfiles}/scripts/scripts -maxde
 
 dwmblocks &
 #feh --bg-scale ${XDG_DATA_HOME:-$HOME}/sync/wallpapers/big-sur-low-quality.jpg
+(sleep 60 && speedtest10m) &
 feh --bg-scale ${XDG_DATA_HOME:-$HOME}/sync/wallpapers/porsche_911.jpg &
 #(sleep 0.1 && redshift -l manual) &
 (sleep 0.1 && picom) &

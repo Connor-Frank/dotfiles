@@ -8,11 +8,11 @@ if [ "$wifistatus" = "up" ]; then
   updates_aur=$(yay -Qua --devel 2> /dev/null | wc -l)
   updates=$(($updates_arch + $updates_aur))
   if [ "$updates" -ge 1 ]; then
-    echo "$package_count  $updates "
+    echo " $package_count  $updates"
   elif [ "$updates" -eq 0 ]; then
-    echo "$package_count "
+    echo " $package_count"
   fi
 else
   package_count=$(pacman -Q 2> /dev/null | wc -l)
-  echo "$package_count  睊"
+  echo " $package_count"
 fi

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+songname=$(mpc | sed "/^volume:/d;s/\\[paused\\].*//g;/\\[playing\\].*/d" | paste -sd ' ' -)
+# add ;s/([^()]*)//g to remove parentheses and everything within
+
+echo "ﱘ "$songname
+
+pidof -x dwm-mpdup >/dev/null 2>&1 || dwm-mpdup >/dev/null 2>&1 &
