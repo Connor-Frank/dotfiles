@@ -30,20 +30,19 @@ For MacOS:
 stow general
 stow mac
 ```
-To un-stow things:
-```
-stow -D package-name
-```
+To un-stow things, use `stow -D <package-name>`, and to re-stow things, use `stow -R <package-name>`.
 
-## How to install scripts
+## Notes on the scripts
 
-This will install all scripts (including the ones that are only intended for Arch Linux):
+To add scripts in `~/.local/bin` to my PATH easily, I added the following lines to my `~/.zprofile` for Linux:
 ```
-stow scripts
+# add scripts to PATH
+typeset -U PATH path
+BINPATH="$HOME/.local/bin"
+path+=("$BINPATH" "${BINPATH}"/*/)
+export PATH
 ```
+Credit: [https://unix.stackexchange.com/a/552849](https://unix.stackexchange.com/a/552849)
 
-To add these scripts to my PATH easily, I added the following line to my .xinitrc for Linux:
-```
-export PATH=$PATH:$(find ${XDG_DATA_HOME:-$HOME/dotfiles}/scripts/scripts -maxdepth 1 -type d | paste -sd ":" -)
-```
+
 I don't know what the best way to do this on Mac would be, but since I don't use most of those scripts on Mac anyway, I haven't bothered. I only use the cmake scripts on Mac, so I just made aliases to them.

@@ -1,5 +1,5 @@
 ## source general options ##
-source ~/.zshrc_generic
+source ~/.config/zsh/.zshrc_generic
 
 ## specific options for arch linux ##
 
@@ -8,10 +8,6 @@ ll=$(last -1 $USER | head -1 | cut -c 40-55)
 on=$(last -1 $USER | head -1 | cut -c 10-20)
 echo "Last login: $ll on $on"
 PS1='%n@%m %1~ %# '
-
-export GDK_DPI_SCALE=1.75
-export QT_AUTO_SCREEN_SCALE_FACTOR=1.75
-export ELM_SCALE=1.75
 
 eval "$(pyenv init -)"
 eval $(thefuck --alias)
@@ -49,5 +45,5 @@ pacdump() {
 }
 
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-  exec startx
+  exec startx "$XDG_CONFIG_HOME/x11/xinitrc"
 fi

@@ -23,9 +23,9 @@ source $HOME/.vim/keymaps.vim
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set background=dark
-set termguicolors
-colorscheme nord
-"highlight Comment ctermfg=green  " useful with no theme
+set notermguicolors
+colorscheme peachpuff
+highlight Comment ctermfg=green  " useful with no theme
 
 " utf-8
 set encoding=utf-8
@@ -124,7 +124,7 @@ augroup END
 source $HOME/.vim/a.vim
 
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': 'wombat',
       \ 'mode_map': {
         \ 'n' : 'VIM'
         \ },

@@ -4,7 +4,16 @@
 
 moonfile="${XDG_DATA_HOME:-$HOME/.local/share}/moonphase"
 
-[ "$(stat -c %y "$moonfile" 2>/dev/null | cut -d' ' -f1)" = "$(date '+%Y-%m-%d')" ] || { curl -sf "wttr.in/?format=%m" > "$moonfile" || exit 1 ;}
+getmoonphase() {
+  wifistatus="$(cat /sys/class/net/w*/operstate 2>/dev/null)"
+  if [ "$wifistatus" = "up" ]; then
+    curl -sf "wttr.in/?format=%m" > "$moonfile" || exit 1 ;
+  else
+    echo "not connected"; exit 1
+  fi
+}
+
+[ "$(stat -c %y "$moonfile" 2>/dev/null | cut -d' ' -f1)" = "$(date '+%Y-%m-%d')" ] || getmoonphase
 
 icon="$(cat "$moonfile")"
 

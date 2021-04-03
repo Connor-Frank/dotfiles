@@ -1,0 +1,9 @@
+#!/bin/sh
+
+dwmblocks &
+(sleep 60 && speedtest10m) &
+feh --bg-scale $HOME/sync/wallpapers/porsche_911.jpg &
+#(sleep 0.1 && redshift -l manual) &
+(sleep 0.1 && picom) &
+(sleep 0.1 && dunst) &
+exec dwm

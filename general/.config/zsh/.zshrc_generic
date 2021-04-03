@@ -46,11 +46,11 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
 ## plugins ##
-source ~/.zsh/antigen.zsh
+source ~/.config/zsh/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle git
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
 antigen apply
 
-source ~/.zsh/fsh/fast-syntax-highlighting.plugin.zsh 2> /dev/null
+source ~/.config/zsh/fsh/fast-syntax-highlighting.plugin.zsh 2> /dev/null

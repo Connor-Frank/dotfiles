@@ -31,7 +31,7 @@ endfunction
 
 let g:startify_bookmarks = [
             \ { 'i': '~/.config/nvim/init.vim' },
-            \ { 'z': '~/.zshrc' },
+            \ { 'z': '~/.config/zsh/.zshrc' },
             \ { 'f': '~/.config/fish/config.fish' },
             \ { 'a': '~/.config/alacritty/alacritty.yml' },
             \ { 's': '~/suckless' },

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# run-cmake -- a script by connor frank
+# this shell script finds the location of the executable built by build_cmake.sh
+# it can be implemented in a function in your shell rc to run the executable
+# or you can use PATH, which is probably easier (and it's what i've done)
+
+# i've tested this on macOS and Linux
+
+# this script was last updated on 25 march 2021
+
+./$(find cmake-build-files -path cmake-build-files/CMakeFiles -prune -false -o -type f -executable)

@@ -55,6 +55,8 @@ ffmpegthumbnailer
 fish
 flex
 fruit
+fsv2
+fuse2
 fzf
 gcc
 gcc-fortran
@@ -81,7 +83,6 @@ gst-libav
 gst-plugins-good
 gtk4
 gtop
-gvim
 highlight
 htop
 hunspell-en_us
@@ -104,7 +105,7 @@ ksquares
 languagetool
 lazygit
 lazynpm
-lf
+lf-git
 lib32-fakeroot
 lib32-gcc-libs
 lib32-libltdl
@@ -156,6 +157,7 @@ net-tools
 netsurf
 network-manager-applet
 networkmanager
+newsboat
 ngspice
 nodejs
 noto-fonts-emoji
@@ -163,7 +165,6 @@ npm
 ntp
 ocaml
 odt2txt
-openrocket
 openssh
 os-prober
 pacgraph
@@ -195,6 +196,8 @@ qtkeychain-qt5
 r
 ranger
 rbenv
+rclone
+rclone-browser
 redshift
 reflector
 rofi
@@ -213,8 +216,6 @@ soundcloud-dl-git
 speech-dispatcher
 speedtest-cli
 sshfs
-steam
-steam-native-runtime
 stockfish
 stow
 sudo
@@ -254,6 +255,7 @@ unrar
 urlview
 valgrind
 vi
+vim
 virtualbox
 visual-studio-code-insiders-bin
 vlc

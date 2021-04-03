@@ -1,3 +1,0 @@
-#!/bin/sh
-
-kill $(pstree -lp | grep -- -dwmbar | sed 's/^.*sleep(//g;s/)$//g')
