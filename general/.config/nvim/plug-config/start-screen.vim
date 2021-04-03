@@ -34,8 +34,8 @@ let g:startify_bookmarks = [
             \ { 'z': '~/.config/zsh/.zshrc' },
             \ { 'f': '~/.config/fish/config.fish' },
             \ { 'a': '~/.config/alacritty/alacritty.yml' },
-            \ { 's': '~/suckless' },
-            \ { 'd': '~/drafts' },
+            \ { 's': '~/.local/src' },
+            \ { 'd': '~/.local/drafts' },
             \ ]
 
 let g:startify_enable_special = 0

@@ -21,7 +21,7 @@ function tmx {
 };
 
 # exa is a cooler ls command that is colored and has file/folder icons
-alias show='exa -al --icons --grid'
+alias show='exa -al --icons'
 # my favorite way to run tty-clock
 alias clock='tty-clock -s -c -f "%d.%m.%Y"'
 

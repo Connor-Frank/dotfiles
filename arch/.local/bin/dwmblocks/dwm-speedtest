@@ -2,7 +2,7 @@
 
 wifistatus="$(cat /sys/class/net/w*/operstate 2>/dev/null)"
 if [ "$wifistatus" = "up" ]; then
-  cat ~/.local/share/speedtest-result | awk '{print " "$2" "$3" ﯲ "$5" "$6" ﯴ "$8" "$9}'
+  cat "${XDG_DATA_HOME:-$HOME/.local/share}/speedtest-result" | awk '{print " "$2" "$3" ﯲ "$5" "$6" ﯴ "$8" "$9}'
 else
   echo " not connected"
 fi

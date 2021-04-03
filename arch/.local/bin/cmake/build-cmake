@@ -16,9 +16,11 @@ mkdir -p cmake-build-files
 cd cmake-build-files
 # run cmake on the previous directory and make
 if cmake ..; then
-  make; cd ..
+  make
+  cd ..
 else
-  cd ..; rm -R cmake-build-files
+  cd ..
+  rm -R cmake-build-files
 fi
 
 # to run the executable, use run-cmake

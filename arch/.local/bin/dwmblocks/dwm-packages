@@ -3,9 +3,9 @@
 wifistatus="$(cat /sys/class/net/w*/operstate 2>/dev/null)"
 
 if [ "$wifistatus" = "up" ]; then
-  package_count=$(pacman -Q 2> /dev/null | wc -l)
-  updates_arch=$(checkupdates 2> /dev/null | wc -l)
-  updates_aur=$(yay -Qua --devel 2> /dev/null | wc -l)
+  package_count=$(pacman -Q 2>/dev/null | wc -l)
+  updates_arch=$(checkupdates 2>/dev/null | wc -l)
+  updates_aur=$(yay -Qua --devel 2>/dev/null | wc -l)
   updates=$(($updates_arch + $updates_aur))
   if [ "$updates" -ge 1 ]; then
     echo " $package_count  $updates"
@@ -13,6 +13,6 @@ if [ "$wifistatus" = "up" ]; then
     echo " $package_count"
   fi
 else
-  package_count=$(pacman -Q 2> /dev/null | wc -l)
+  package_count=$(pacman -Q 2>/dev/null | wc -l)
   echo " $package_count"
 fi

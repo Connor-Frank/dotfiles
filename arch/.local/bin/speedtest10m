@@ -3,7 +3,7 @@
 while true; do
   wifistatus="$(cat /sys/class/net/w*/operstate 2>/dev/null)"
   if [ "$wifistatus" = "up" ]; then
-    echo $(speedtest --simple) > ~/.local/share/speedtest-result
+    echo $(speedtest --simple) > "${XDG_DATA_HOME:-$HOME/.local/share}/speedtest-result"
   fi
   sleep 10m
 done

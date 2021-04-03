@@ -26,6 +26,11 @@ calc
 calcurse
 ccls
 cheese
+clion
+clion-cmake
+clion-gdb
+clion-jre
+clion-lldb
 cool-retro-term
 cowsay
 cpupower
@@ -45,6 +50,7 @@ dunst
 efibootmgr
 elinks
 enchant
+epub-thumbnailer-git
 etcher-bin
 evince
 exa
@@ -96,9 +102,9 @@ jshon
 julia
 jupyterlab
 kbreakout
-kdenlive
 keepassxc
 kicad
+kite
 klines
 kmines
 ksquares
@@ -182,7 +188,6 @@ pinta
 pkgconf
 pkgstats
 powertop
-processing
 pubip
 pulseaudio
 pulseaudio-alsa
@@ -210,6 +215,7 @@ screenkey
 seahorse
 secure-delete
 shellcheck
+shfmt
 sl
 smartmontools
 soundcloud-dl-git
@@ -225,6 +231,7 @@ sxiv
 sysstat
 systemd-vgaswitcheroo-units
 teams
+termdown
 termite
 tex-gyre-fonts
 texinfo
@@ -279,7 +286,6 @@ xorg-xdpyinfo
 xorg-xinit
 xorg-xinput
 xorg-xsetroot
-xscreensaver-arch-logo
 yay
 youtube-dl
 zathura

@@ -7,9 +7,10 @@ moonfile="${XDG_DATA_HOME:-$HOME/.local/share}/moonphase"
 getmoonphase() {
   wifistatus="$(cat /sys/class/net/w*/operstate 2>/dev/null)"
   if [ "$wifistatus" = "up" ]; then
-    curl -sf "wttr.in/?format=%m" > "$moonfile" || exit 1 ;
+    curl -sf "wttr.in/?format=%m" >"$moonfile" || exit 1
   else
-    echo "not connected"; exit 1
+    echo "not connected"
+    exit 1
   fi
 }
 
@@ -18,15 +19,39 @@ getmoonphase() {
 icon="$(cat "$moonfile")"
 
 case "$icon" in
-	🌑) name="New" ; nficon="";;
-	🌒) name="Waxing Crescent" ; nficon="";;
-	🌓) name="First Quarter" ; nficon="";;
-	🌔) name="Waxing Gibbous" ; nficon="";;
-	🌕) name="Full" ; nficon="";;
-	🌖) name="Waning Gibbous" ; nficon="";;
-	🌗) name="Last Quarter" ; nficon="";;
-	🌘) name="Waning Crescent" ; nficon="";;
-	*) exit 1 ;;
+  🌑)
+    name="New"
+    nficon=""
+    ;;
+  🌒)
+    name="Waxing Crescent"
+    nficon=""
+    ;;
+  🌓)
+    name="First Quarter"
+    nficon=""
+    ;;
+  🌔)
+    name="Waxing Gibbous"
+    nficon=""
+    ;;
+  🌕)
+    name="Full"
+    nficon=""
+    ;;
+  🌖)
+    name="Waning Gibbous"
+    nficon=""
+    ;;
+  🌗)
+    name="Last Quarter"
+    nficon=""
+    ;;
+  🌘)
+    name="Waning Crescent"
+    nficon=""
+    ;;
+  *) exit 1 ;;
 esac
 
 echo "${nficon-?}"

@@ -18,6 +18,8 @@ command! Vterm vert term
 " keymaps
 source $HOME/.vim/keymaps.vim
 
+let skip_defaults_vim=1
+set viminfo=""
 " utf-8
 set encoding=utf-8
 set fileencoding=utf-8

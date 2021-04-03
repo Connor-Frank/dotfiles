@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# https://www.nerdfonts.com/cheat-sheet 
+# https://www.nerdfonts.com/cheat-sheet
 # nf-mdi icons
 
 # loop through all attached batteries and format the info
@@ -21,7 +21,7 @@ for battery in /sys/class/power_supply/BAT?*; do
   [ "$status" = "" ] && [ "$capacity" -le 25 ] && warn="ﲍ"
 
   # more specific battery icons
-  if [ "$status" =  "" ]; then
+  if [ "$status" = "" ]; then
     if [ "$capacity" -eq 100 ]; then
       status=""
     elif [ "$capacity" -ge 90 ]; then
@@ -48,5 +48,6 @@ for battery in /sys/class/power_supply/BAT?*; do
   fi
 
   # Prints the info
-  printf "%s%s %d%%" "$status" "$warn" "$capacity"; unset warn
+  printf "%s%s %d%%" "$status" "$warn" "$capacity"
+  unset warn
 done && exit 0
