@@ -67,10 +67,10 @@ function tmx
 end
 funcsave tmx
 
-# you can find this script in my repository "scripts"
+# you can find this script in this repository under "scripts"
 alias build-cmake='~/scripts/cmake/build.sh'
 
-# you can find this script in my repository "scripts"
+# you can find this script in this repository under "scripts"
 function run-cmake
   set runfile (~/scripts/cmake/run.sh)
   $runfile $argv[1..-1]

@@ -1,10 +1,13 @@
 ## source general config ##
-source ~/.zshrc_generic
+source ~/.config/zsh/.zshrc_generic
 
 ## specific options for mac ##
 
+alias build-cmake='~/scripts/cmake/build-cmake'
+alias run-cmake='~/scripts/cmake/run-cmake'
+
 # macOS prompt
-export PS1='%n@%m %1~ %# '
+PS1='%n@%m %1~ %# '
 
 alias pubip='curl ifconfig.me; echo'
 
