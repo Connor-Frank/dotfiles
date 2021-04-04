@@ -77,7 +77,8 @@ set noeb vb t_vb=
 set splitbelow
 set splitright
 " nicer vert split separator
-set fillchars+=vert:\█
+"set fillchars+=vert:\█
+set fillchars+=vert:\ 
 
 " space/tab indicator
 set list listchars=tab:>·,trail:~,extends:>,precedes:<,space:·
