@@ -1,9 +1,9 @@
 #!/bin/sh
 
-dwmblocks &
-(sleep 60 && speedtest10m) &
-feh --bg-scale --no-fehbg $HOME/sync/wallpapers/porsche_911.jpg &
-#(sleep 0.1 && redshift -l manual) &
-(sleep 0.1 && picom) &
-(sleep 0.1 && dunst) &
-exec dwm
+if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xprofile" ]; then
+  . "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xprofile"
+else
+  . "$HOME/.xprofile"
+fi
+
+ssh-agent dwm
