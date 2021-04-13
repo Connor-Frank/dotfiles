@@ -154,4 +154,6 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set background=dark
 set notermguicolors
 colorscheme peachpuff
-highlight Comment ctermfg=green  " useful with no theme
+highlight Comment guibg=green ctermfg=green
+highlight Search guibg=blue ctermbg=blue term=underline
+highlight IncSearch guibg=blue ctermbg=blue term=underline

@@ -1,10 +1,7 @@
-## source general config ##
-source ~/.config/zsh/.zshrc_generic
-
 ## specific options for mac ##
 
-alias build-cmake='~/scripts/cmake/build-cmake'
-alias run-cmake='~/scripts/cmake/run-cmake'
+alias build-cmake='~/.local/bin/cmake/build-cmake'
+alias run-cmake='~/.local/bin/cmake/run-cmake'
 
 # macOS prompt
 PS1='%n@%m %1~ %# '
@@ -15,3 +12,8 @@ alias pubip='curl ifconfig.me; echo'
 alias xbrew='arch -x86_64 /usr/local/bin/brew'
 # this is the way i always run this package, so i created an alias
 alias mac_info='osx-cpu-temp -c -g -f -F'
+
+## source general config ##
+source ~/.config/zsh/.zshrc_generic
+export PATH=$HOME/.config/nvcode/utils/bin:$PATH
+export PATH=$HOME/.config/nvcode/utils/bin:$PATH
