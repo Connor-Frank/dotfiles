@@ -20,8 +20,6 @@ function tmx {
   tmux attach-session -d -t $name
 };
 
-# exa is a cooler ls command that is colored and has file/folder icons
-alias ls='exa'
 # my favorite way to run tty-clock
 alias clock='tty-clock -s -c -f "%d.%m.%Y"'
 
@@ -52,5 +50,9 @@ antigen bundle git
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
 antigen apply
+
+# exa is a cooler ls command that is colored and has file/folder icons
+unalias ls
+alias ls='exa'
 
 source ~/.config/zsh/fsh/fast-syntax-highlighting.plugin.zsh 2> /dev/null
