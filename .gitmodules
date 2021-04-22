@@ -1,3 +1,6 @@
-[submodule ".config/zsh/fsh"]
-	path = general/.config/zsh/fsh
-	url = https://github.com/zdharma/fast-syntax-highlighting
+[submodule "general/.config/zsh/fsh"]
+  path = general/.config/zsh/fsh
+  url = https://github.com/zdharma/fast-syntax-highlighting.git
+[submodule "general/.config/nvim"]
+  path = general/.config/nvim
+  url = https://github.com/ChristianChiarulli/nvcode

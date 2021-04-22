@@ -14,7 +14,7 @@ alias vs='code-insiders . && exit'
 
 # creates a tmux session named as the current directory and containing two windows
 function tmx {
-  set name $(basename $PWD)
+  name="$(basename $PWD)"
   tmux new-session -d -s $name
   tmux new-window -d
   tmux attach-session -d -t $name
