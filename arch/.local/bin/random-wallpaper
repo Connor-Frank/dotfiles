@@ -1,0 +1,3 @@
+#!/bin/sh
+
+shuf -ezn 1 $HOME/.local/wallpapers/*.jpg | xargs -0 -n1 echo
