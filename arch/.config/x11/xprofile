@@ -2,7 +2,7 @@
 
 dwmblocks &
 (sleep 60 && speedtest10m) &
-feh --bg-scale --no-fehbg $(random-wallpaper) &
+random-wallpaper &
 #redshift -l manual &
 (sleep 0.1 && picom) &
 (sleep 0.1 && dunst) &

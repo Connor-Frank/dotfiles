@@ -48,6 +48,6 @@ for battery in /sys/class/power_supply/BAT?*; do
   fi
 
   # Prints the info
-  printf "%s%s %d%%" "$status" "$warn" "$capacity"
+  printf "%s %d%% %s" "$status" "$capacity" "$warn"
   unset warn
 done && exit 0
