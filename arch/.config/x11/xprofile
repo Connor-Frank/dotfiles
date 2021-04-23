@@ -2,7 +2,7 @@
 
 dwmblocks &
 (sleep 60 && speedtest10m) &
-feh --bg-scale --no-fehbg $HOME/.local/wallpapers/porsche_911.jpg &
+feh --bg-scale --no-fehbg $HOME/.local/wallpapers/retrowave_911.jpg &
 #redshift -l manual &
 (sleep 0.1 && picom) &
 (sleep 0.1 && dunst) &

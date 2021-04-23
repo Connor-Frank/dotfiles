@@ -89,6 +89,7 @@ gst-libav
 gst-plugins-good
 gtk4
 gtop
+gvim
 highlight
 htop
 hunspell-en_us
@@ -208,7 +209,6 @@ reflector
 rofi
 rstudio-desktop-bin
 rust
-s
 screen
 screenfetch
 screenkey
@@ -261,7 +261,6 @@ unrar
 urlview
 valgrind
 vi
-vim
 virtualbox
 visual-studio-code-insiders-bin
 vlc
