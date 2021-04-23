@@ -21,3 +21,4 @@ alias mac_info='osx-cpu-temp -c -g -f -F'
 
 export PATH=$HOME/.config/nvim/utils/bin:$PATH
 export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
+export GROOVY_HOME=/opt/homebrew/opt/groovy/libexec

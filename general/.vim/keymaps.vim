@@ -4,13 +4,13 @@ let mapleader = "\<Space>"
 noremap <leader>n :noh<CR>
 
 " code formatting
-noremap <leader>lF :FormatCode<CR>
+noremap <leader>lf :FormatCode<CR>
 
 " markdown preview
 nmap <leader>m <Plug>MarkdownPreview
 
 " latex preview
-nmap <leader>l :LLPStartPreview<CR>
+nmap <leader>p :LLPStartPreview<CR>
 
 " open file explorer (ranger) with <leader>f by default
 
