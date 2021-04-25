@@ -23,7 +23,10 @@ command! Vterm vert term
 source $HOME/.vim/keymaps.vim
 
 let skip_defaults_vim=1
-set viminfo=""
+set viminfo+=n~/.local/share/viminfo
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+endif
 set encoding=utf-8
 set fileencoding=utf-8
 set number relativenumber
