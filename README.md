@@ -1,19 +1,17 @@
 # dotfiles
 My dotfiles. I keep my general (cross-platform) files in [general](general) and my system-specific files in [arch](arch) and [mac](mac) respectfully.
 
-I mainly use Linux (because it's better and I like it much more, especially for development) but I try to maintain my Mac configuration too.
+I mainly use Linux (because it's better and I like it much more, especially for development) but I try to maintain my Mac configuration too, because having a "normie" machine is necessary sometimes. I'd like to be able to have a similar workflow if I ever need to do some coding on Mac.
 
 For shell scripts, I use dash. On Arch Linux you can use [dashbinsh](https://aur.archlinux.org/packages/dashbinsh/) to symlink it to `/bin/sh`.
 
 ## Attributions
 
-For Neovim, I use [Chris Chiarulli's](https://github.com/ChristianChiarulli) config, [nvcode](https://github.com/ChristianChiarulli/nvcode). I've made some tweaks here and there and I intend to change more of it eventually, but it's mostly his work for now.
-
 Most of my dwmblocks shell scripts were inspired by (if not copied from) [Luke Smith](https://github.com/LukeSmithxyz). His repo with them is [here](https://github.com/LukeSmithxyz/voidrice/tree/master/.local/bin/statusbar) if you want to check them out.
 
 ## How to install configs
 
-Make sure to clone submodules, otherwise Neovim or zsh syntax highlighting won't work:
+Make sure to clone submodules, otherwise zsh syntax highlighting won't work:
 ```
 git submodule update --init
 ```
