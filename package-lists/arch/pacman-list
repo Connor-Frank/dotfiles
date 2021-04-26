@@ -2,6 +2,8 @@ acpi
 adobe-base-14-fonts
 adobe-source-sans-pro-fonts
 alacritty
+alsa-firmware
+alsa-tools
 alsa-utils
 aspell-en
 atool
@@ -79,6 +81,8 @@ gnome-2048
 gnome-chess
 gnome-maps
 gnome-sudoku
+goland
+goland-jre
 google-chrome
 gotop
 gpu-switch
@@ -95,6 +99,9 @@ htop
 hunspell-en_us
 icedtea-web
 imlib2-heic
+intel-ucode
+intellij-idea-ultimate-edition
+intellij-idea-ultimate-edition-jre
 iotop
 isync
 jdk8-openjdk
@@ -154,6 +161,7 @@ mutt-wizard-git
 mythes-en
 nano
 nautilus
+ncdu
 ncmatrix
 ncmpcpp
 neofetch
@@ -194,6 +202,7 @@ pulseaudio
 pulseaudio-alsa
 pulsemixer
 pwgen
+pycharm-professional
 pyenv
 python-chardet
 python-isort
@@ -218,7 +227,6 @@ shellcheck
 shfmt
 sl
 smartmontools
-soundcloud-dl-git
 speech-dispatcher
 speedtest-cli
 sshfs
@@ -259,10 +267,10 @@ ufw
 unixodbc
 unrar
 urlview
+v4l2loopback-dkms
 valgrind
 vi
 virtualbox
-visual-studio-code-insiders-bin
 vlc
 w3m
 wavemon
@@ -274,6 +282,7 @@ wpa_supplicant
 xclip
 xcompmgr
 xdg-utils
+xdotool
 xf86-input-synaptics
 xf86-video-intel
 xorg-fonts-100dpi

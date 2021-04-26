@@ -2,7 +2,7 @@
 
 dwmblocks &
 (sleep 60 && speedtest10m) &
-random-wallpaper &
+(while true; do random-wallpaper; sleep 3600; done) &
 #redshift -l manual &
 (sleep 0.1 && picom) &
 (sleep 0.1 && dunst) &
