@@ -1,5 +1,9 @@
 let mapleader = "\<Space>"
 
+" jk for escape
+inoremap kj <Esc>
+cnoremap kj <C-C>
+
 " clear search
 noremap <leader>n :noh<CR>
 

@@ -6,9 +6,6 @@ HISTSIZE=10000000
 SAVEHIST=10000000
 HISTFILE=~/.cache/zsh/history
 
-# for doom emacs
-alias doom='~/.emacs.d/bin/doom'
-
 alias code='code-insiders'
 alias vs='code-insiders . && exit'
 
