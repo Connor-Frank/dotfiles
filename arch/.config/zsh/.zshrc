@@ -3,11 +3,10 @@ source ~/.config/zsh/.zshrc_generic
 
 ## specific options for arch linux ##
 
-# macOS prompt
+# macOS-like startup message
 ll=$(last -1 $USER | head -1 | cut -c 40-55)
 on=$(last -1 $USER | head -1 | cut -c 10-20)
 echo "Last login: $ll on $on"
-PS1='%n@%m %1~ %# '
 
 eval "$(pyenv init -)"
 eval $(thefuck --alias)
