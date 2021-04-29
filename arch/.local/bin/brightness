@@ -1,7 +1,7 @@
 #!/bin/bash
 
 MON="eDP1"    # Discover monitor name with: xrandr | grep " connected"
-STEP=10        # Step Up/Down brightnes by: 5 = ".05", 10 = ".10", etc.
+STEP=10       # Step Up/Down brightnes by: 5 = ".05", 10 = ".10", etc.
 
 CurrBright=$( xrandr --verbose --current | grep ^"$MON" -A5 | tail -n1  )
 CurrBright="${CurrBright##* }"  # Get brightness level with decimal place
@@ -21,14 +21,14 @@ MathBright=$(( MathBright + Right  ))
 [[ "$MathBright" -gt 999   ]] && MathBright=999      # Can't go over 9.99
 
 if [[ "${#MathBright}" -eq 3  ]] ; then
-      MathBright="$MathBright"000         # Pad with lots of zeros
-          CurrBright="${MathBright:0:1}.${MathBright:1:2}"
-          else
-                MathBright="$MathBright"000         # Pad with lots of zeros
-                    CurrBright=".${MathBright:0:2}"
-                    fi
+  MathBright="$MathBright"000         # Pad with lots of zeros
+  CurrBright="${MathBright:0:1}.${MathBright:1:2}"
+else
+  MathBright="$MathBright"000         # Pad with lots of zeros
+  CurrBright=".${MathBright:0:2}"
+fi
 
-                    xrandr --output "$MON" --brightness "$CurrBright"   # Set new brightness
+xrandr --output "$MON" --brightness "$CurrBright"   # Set new brightness
 
 # Display current brightness
 printf "Monitor $MON "

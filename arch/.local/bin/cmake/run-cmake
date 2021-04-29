@@ -9,4 +9,4 @@
 
 # this script was last updated on 25 march 2021
 
-./$(find cmake-build-files -path cmake-build-files/CMakeFiles -prune -false -o -type f -executable)
+exec $(find cmake-build-files -path cmake-build-files/CMakeFiles -prune -false -o -type f -executable)

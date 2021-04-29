@@ -11,6 +11,9 @@ echo "Last login: $ll on $on"
 eval "$(pyenv init -)"
 eval $(thefuck --alias)
 
+# this fixes a problem with incomplete zshrc sourcing
+alias s='source ~/.config/zsh/.zshrc > /dev/null 2>&1'
+
 alias name='uname -snrmo'
 alias comp='picom'
 alias logins='last -f /var/log/wtmp | less'
