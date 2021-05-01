@@ -1,34 +1,57 @@
-let mapleader = "\<Space>"
+"basic autopair
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+
+"remove arrow keys from normal mode
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
+"move by visual line not actal line
+nnoremap j gj
+nnoremap k gk
+
+"use semicolon as colon in normal mode
+nnoremap ; :
 
 " jk for escape
 inoremap kj <Esc>
 cnoremap kj <C-C>
 
+" move between splits and create new ones
+" can be a double-edged sword when it's an accident
+function! WinMove(key)
+  let t:curwin = winnr()
+  exec "wincmd ".a:key
+  if (t:curwin == winnr())
+    if (match(a:key,'[jk]'))
+      wincmd v
+    else
+      wincmd s
+    endif
+    exec "wincmd ".a:key
+  endif
+endfunction
+nnoremap <silent> <C-h> :call WinMove('h')<CR>
+nnoremap <silent> <C-j> :call WinMove('j')<CR>
+nnoremap <silent> <C-k> :call WinMove('k')<CR>
+nnoremap <silent> <C-l> :call WinMove('l')<CR>
+
+let mapleader = "\<Space>"
+
 " clear search
 noremap <leader>n :noh<CR>
-
-" code formatting
-noremap <leader>lf :FormatCode<CR>
-
-" markdown preview
-nmap <leader>m <Plug>MarkdownPreview
-
-" latex preview
-nmap <leader>p :LLPStartPreview<CR>
-
-" open file explorer (ranger) with <leader>f by default
-
 " terminal
 nmap <leader>o :term<CR>
+" plugin-specific keybinds are in ~/.vim/plugin-config/keymaps.vim
 
-" space-e to toggle tagbar
-nmap <leader>e :TagbarToggle<CR>
-
-" leader + c to comment/uncomment
-nmap <leader>c <Plug>NERDCommenterToggle
-vmap <leader>c <Plug>NERDCommenterToggle<CR>gv
-
-" -------------------------------------------------- 
+" --------------------------------------------------
 
 " tab configuration
 
@@ -53,16 +76,6 @@ noremap <leader><Right> :+tabmove<cr>
 
 " --------------------------------------------------
 
-" splits
-
-" use space + j/k/l/h to move between splits, like with cursor
-nnoremap <leader>wj <C-W><C-J>
-nnoremap <leader>wk <C-W><C-K>
-nnoremap <leader>wl <C-W><C-L>
-nnoremap <leader>wh <C-W><C-H>
-
-" --------------------------------------------------
-
 " buffer configuration
 " space-q to close buffer
 nmap <leader>q :bd<CR>
@@ -72,24 +85,24 @@ nnoremap <silent> <leader>bb :buffers<CR>
 
 " delete hidden buffers
 function DeleteHiddenBuffers()
-	let tpbl=[]
-	call map(range(1, tabpagenr('$')), 'extend(tpbl, tabpagebuflist(v:val))')
-	for buf in filter(range(1, bufnr('$')), 'bufexists(v:val) && index(tpbl, v:val)==-1')
-		silent execute 'bwipeout' buf
-	endfor
+  let tpbl=[]
+  call map(range(1, tabpagenr('$')), 'extend(tpbl, tabpagebuflist(v:val))')
+  for buf in filter(range(1, bufnr('$')), 'bufexists(v:val) && index(tpbl, v:val)==-1')
+    silent execute 'bwipeout' buf
+  endfor
 endfunction
 " delete empty buffers
 function! DeleteEmptyBuffers()
-	let [i, n; empty] = [1, bufnr('$')]
-	while i <= n
-		if bufexists(i) && bufname(i) == ''
-			call add(empty, i)
-		endif
-		let i += 1
-	endwhile
-	if len(empty) > 0
-		exe 'bdelete' join(empty)
-	endif
+  let [i, n; empty] = [1, bufnr('$')]
+  while i <= n
+    if bufexists(i) && bufname(i) == ''
+      call add(empty, i)
+    endif
+    let i += 1
+  endwhile
+  if len(empty) > 0
+    exe 'bdelete' join(empty)
+  endif
 endfunction
 
 " space-x to delete empty and hidden buffers

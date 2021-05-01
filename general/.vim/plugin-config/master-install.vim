@@ -18,8 +18,6 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
 
-" autocompletion of pairs
-Plug 'jiangmiao/auto-pairs'
 " auto commenter
 Plug 'preservim/nerdcommenter'
 

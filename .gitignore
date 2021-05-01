@@ -1,7 +1,10 @@
 general/.vim/pack
+general/.config/nvim/pack
+
 general/.vim/sessions
 .netrwhist
-general/.config/nvim/autoload/plugged
+Session.vim
+
 *.zwc
 .DS_Store
 error.log
