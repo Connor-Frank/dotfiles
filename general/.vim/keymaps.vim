@@ -1,12 +1,3 @@
-"basic autopair
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
-
 "remove arrow keys from normal mode
 noremap <Up> <Nop>
 noremap <Down> <Nop>

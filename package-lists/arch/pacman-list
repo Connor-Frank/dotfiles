@@ -26,6 +26,7 @@ brave-bin
 broadcom-wl-dkms
 calc
 calcurse
+cargo-web
 ccls
 cheese
 clion
@@ -39,6 +40,7 @@ cpupower
 cronie
 ctags
 ctop
+cuda-tools
 cups
 cups-pdf
 dart
@@ -81,10 +83,13 @@ gnome-2048
 gnome-chess
 gnome-maps
 gnome-sudoku
+gnome-weather
 goland
 goland-jre
 google-chrome
+google-java-format
 gotop
+gpick
 gpu-switch
 groff
 grub
@@ -93,7 +98,7 @@ gst-libav
 gst-plugins-good
 gtk4
 gtop
-gvim
+gvim-git
 highlight
 htop
 hunspell-en_us
@@ -104,6 +109,7 @@ intellij-idea-ultimate-edition
 intellij-idea-ultimate-edition-jre
 iotop
 isync
+jack2
 jdk8-openjdk
 jre8-openjdk
 jshon
@@ -166,8 +172,10 @@ ncmatrix
 ncmpcpp
 neofetch
 neomutt
+neovide-git
 neovim-git
 nerd-fonts-hack
+nerd-fonts-noto-sans-mono
 net-tools
 netsurf
 network-manager-applet
@@ -197,9 +205,12 @@ pinta
 pkgconf
 pkgstats
 powertop
+prettier
 pubip
 pulseaudio
 pulseaudio-alsa
+pulseaudio-jack
+pulseaudio-qt
 pulsemixer
 pwgen
 pycharm-professional
@@ -209,7 +220,7 @@ python-isort
 qtcreator
 qtkeychain-qt5
 r
-ranger
+ranger-git
 rbenv
 rclone
 rclone-browser
@@ -217,7 +228,7 @@ redshift
 reflector
 rofi
 rstudio-desktop-bin
-rust
+rustup
 screen
 screenfetch
 screenkey

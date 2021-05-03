@@ -21,6 +21,9 @@ Plug 'itchyny/vim-gitbranch'
 " auto commenter
 Plug 'preservim/nerdcommenter'
 
+" autopairs
+Plug 'jiangmiao/auto-pairs'
+
 " tagbar (on the right, shows methods)
 Plug 'preservim/tagbar'
 
