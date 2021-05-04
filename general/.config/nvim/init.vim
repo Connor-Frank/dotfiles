@@ -4,6 +4,10 @@ set nocompatible
 
 source $HOME/.config/nvim/plugins.vim
 
+"__COMMANDS__"
+
+command! PU PlugUpdate | PlugUpgrade
+
 "__COLORS__"
 
 "set true colors for term + vim
