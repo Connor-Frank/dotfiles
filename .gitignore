@@ -1,4 +1,5 @@
 general/.vim/pack
+general/.vim/autoload
 general/.config/nvim/pack
 
 general/.vim/sessions
