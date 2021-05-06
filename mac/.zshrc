@@ -1,9 +1,13 @@
 ## source general config ##
 source $HOME/.config/zsh/.zshrc_generic
 
+eval "$(pyenv init -)"
+eval $(thefuck --alias)
+
 ## specific options for mac ##
 
-# this fixes a problem with incomplete zshrc sourcing
+alias update='brew update && brew upgrade --fetch-HEAD'
+
 alias s='source ~/.zshrc > /dev/null 2>&1'
 
 alias build-cmake='~/.local/bin/cmake/build-cmake'
