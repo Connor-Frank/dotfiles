@@ -1,7 +1,7 @@
 acpi
 adobe-base-14-fonts
 adobe-source-sans-pro-fonts
-alacritty
+alacritty-git
 alsa-firmware
 alsa-tools
 alsa-utils
@@ -172,7 +172,7 @@ ncmatrix
 ncmpcpp
 neofetch
 neomutt
-neovide-git
+neovide
 neovim-git
 nerd-fonts-hack
 nerd-fonts-noto-sans-mono
@@ -226,6 +226,7 @@ rclone
 rclone-browser
 redshift
 reflector
+ripgrep
 rofi
 rstudio-desktop-bin
 rustup
@@ -283,6 +284,9 @@ valgrind
 vi
 virtualbox
 vlc
+vulkan-intel
+vulkan-mesa-layers
+vulkan-tools
 w3m
 wavemon
 wget
