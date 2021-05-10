@@ -1,7 +1,7 @@
 acpi
 adobe-base-14-fonts
 adobe-source-sans-pro-fonts
-alacritty-git
+alacritty
 alsa-firmware
 alsa-tools
 alsa-utils
@@ -237,6 +237,7 @@ seahorse
 secure-delete
 shellcheck
 shfmt
+siad
 sl
 smartmontools
 speech-dispatcher
@@ -250,7 +251,6 @@ supertuxkart
 sxiv
 sysstat
 systemd-vgaswitcheroo-units
-teams
 termdown
 tex-gyre-fonts
 texinfo
