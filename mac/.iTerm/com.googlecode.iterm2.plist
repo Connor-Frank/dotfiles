@@ -18,6 +18,8 @@
 	<true/>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
+	<key>HideScrollbar</key>
+	<true/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_6EC4FA8E-6CBD-40FC-8D3D-B7CF9F2D7B1E</key>
