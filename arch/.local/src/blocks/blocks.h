@@ -2,19 +2,18 @@
 // recompile using the make command.
 static const Block blocks[] = {
     /*Icon*/ /*Command*/ /*Update Interval*/ /*Update Signal*/
+    {" ", "dwm-network", 1, 3},
+    //{" ", "dwm-speedtest", 60, 4},
+    //{" ", "dwm-moonphase", 18000, 4},
+    {" ", "dwm-weather", 18000, 4},
+    //{" ", "dwm-music", 0, 11},
     {" ", "dwm-cputemp", 10, 3},
     {" ", "dwm-cpubars", 1, 3},
     {" ", "dwm-packages", 600, 3},
     {" ", "dwm-volume", 0, 10},
-    {" ", "dwm-battery", 15, 3},
+    {" ", "dwm-battery", 10, 3},
     {" ", "dwm-misc", 1, 1},
-    //{" ", "dwm-clocksimple", 1, 2},
     {" ", "dwm-clockfancy", 5, 2},
-    {"; ", "dwm-network", 1, 3},
-    {" ", "dwm-speedtest", 60, 4},
-    {" ", "dwm-moonphase", 18000, 4},
-    {" ", "dwm-weather", 18000, 4},
-    {" ", "dwm-music", 0, 11},
 };
 
 // Sets delimiter between status commands. NULL character ('\0') means no

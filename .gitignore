@@ -4,6 +4,9 @@ general/.config/nvim/pack
 
 *.o
 
+share
+pyenv
+arch/.local/pacman-list
 general/.vim/sessions
 .netrwhist
 Session.vim

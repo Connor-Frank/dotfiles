@@ -43,11 +43,18 @@ alias upd='sudo reflector --verbose --age 12 --protocol https --sort rate --save
 
 pacdump() {
   pacgraph -f ~/dotfiles/package-lists/arch/pacgraph
-  pacman -Qe | cut -d' ' -f1 > ~/dotfiles/package-lists/arch/pacman-list
+  pacman -Qe | cut -d' ' -f1 > ~/.local/pacman-list
 }
 
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
   exec startx "$XDG_CONFIG_HOME/x11/xinitrc"
+fi
+
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+    ssh-agent -t 1h > "$XDG_RUNTIME_DIR/ssh-agent.env"
+fi
+if [[ ! "$SSH_AUTH_SOCK" ]]; then
+    source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

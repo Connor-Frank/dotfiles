@@ -11,8 +11,6 @@ static const int showbar = 1; /* 0 : no bar
                                * 1 : yes bar */
 static const int topbar = 1;  /* 0 : bottom bar
                                * 1 : top bar */
-static const int extrabarright = 0; /* 1 = right */
-static const char statussep = ';';  /* bar separator */
 
 static const char *fonts[] = {
     "Hack Nerd Font:size=12:antialias=true:autohint=true"};
@@ -87,7 +85,7 @@ static const Rule rules[] = {
 /* layout */
 static const float mfact = 0.5;   /* factor of master area size [0.05..0.95] */
 static const int nmaster = 1;     /* number of clients in master area */
-static const int resizehints = 0; /* 0 : don't respect size hints
+static const int resizehints = 1; /* 0 : don't respect size hints
                                    * 1 : means respect size hints
                                    * in tiled resizals */
 static const int decorhints = 0;  /* 1 means respect decoration hints */
@@ -184,7 +182,7 @@ static Key keys[] = {
     {SUPKEY | MODKEY, XK_r, spawn, SHCMD("kill -38 $(pidof dwmblocks)")},
     {SUPKEY | MODKEY | ShiftMask, XK_r, spawn, SHCMD("random-wallpaper")},
     /* lock and power menu */
-    {SUPKEY, XK_l, spawn, SHCMD("slock")},
+    {SUPKEY | ControlMask, XK_l, spawn, SHCMD("slock")},
     {SUPKEY | ShiftMask, XK_space, spawn, SHCMD("power")},
     /* utility keys */
     {0, XF86XK_AudioMute, spawn,
@@ -267,10 +265,10 @@ static Key keys[] = {
     {SUPKEY | ShiftMask, XK_l, moveresize, {.v = "0x 0y 25w 0h"}},
     {SUPKEY | ShiftMask, XK_h, moveresize, {.v = "0x 0y -25w 0h"}},
     /* monitors */
-    {MODKEY, XK_comma, focusmon, {.i = -1}},
-    {MODKEY, XK_period, focusmon, {.i = +1}},
-    {MODKEY | ShiftMask, XK_comma, tagmon, {.i = -1}},
-    {MODKEY | ShiftMask, XK_period, tagmon, {.i = +1}},
+    {SUPKEY, XK_comma, focusmon, {.i = -1}},
+    {SUPKEY, XK_period, focusmon, {.i = +1}},
+    {SUPKEY | ShiftMask, XK_comma, tagmon, {.i = -1}},
+    {SUPKEY | ShiftMask, XK_period, tagmon, {.i = +1}},
     /* desktop names */
     TAGKEYS(XK_1, 0) TAGKEYS(XK_2, 1) TAGKEYS(XK_3, 2) TAGKEYS(XK_4, 3)
         TAGKEYS(XK_5, 4) TAGKEYS(XK_6, 5) TAGKEYS(XK_7, 6) TAGKEYS(XK_8, 7)

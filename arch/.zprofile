@@ -1,13 +1,10 @@
 #!/bin/zsh
 
-#eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
-#export SSH_AUTH_SOCK
-#source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
-
-export GDK_SCALE=1.75
-export GDK_DPI_SCALE=1.75
-export QT_AUTO_SCREEN_SCALE_FACTOR=1.75
-export ELM_SCALE=1.75
+# HiDPI
+export GDK_SCALE=1.8
+export GDK_DPI_SCALE=1.8
+export QT_AUTO_SCREEN_SCALE_FACTOR=1.8
+export ELM_SCALE=1.8
 
 # add scripts to PATH
 typeset -U PATH path

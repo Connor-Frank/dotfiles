@@ -27,4 +27,4 @@ c() {
 bright=$(c $(brightness | awk '{print $4}')x100)
 monitor=${bright%.*}"%"
 
-echo "$wifi $speed $mail$monitor"
+echo "$wifi$mail"
