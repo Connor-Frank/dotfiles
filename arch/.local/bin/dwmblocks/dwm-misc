@@ -17,7 +17,7 @@ unread="$(find "${XDG_DATA_HOME:-$HOME/.local/share}"/mail/*/[Ii][Nn][Bb][Oo][Xx
 if [ "$unread" = "0" ]; then
   mail=""
 else
-  mail=" "
+  mail=" "
 fi
 
 c() {

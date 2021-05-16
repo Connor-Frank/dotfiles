@@ -4,6 +4,7 @@ general/.config/nvim/pack
 
 *.o
 
+private
 share
 pyenv
 arch/.local/pacman-list
@@ -13,4 +14,4 @@ Session.vim
 
 *.zwc
 .DS_Store
-error.log
+*.log

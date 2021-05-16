@@ -184,23 +184,29 @@ static Key keys[] = {
     /* lock and power menu */
     {SUPKEY | ControlMask, XK_l, spawn, SHCMD("slock")},
     {SUPKEY | ShiftMask, XK_space, spawn, SHCMD("power")},
-    /* utility keys */
+    /* audio volume control */
     {0, XF86XK_AudioMute, spawn,
      SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)")},
     {0, XF86XK_AudioRaiseVolume, spawn,
      SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)")},
     {0, XF86XK_AudioLowerVolume, spawn,
      SHCMD("pamixer --allow-boost -d 5; kill -44 $(pidof dwmblocks)")},
-    {0, XF86XK_AudioPrev, spawn, SHCMD("mpc prev")},
-    {0, XF86XK_AudioNext, spawn, SHCMD("mpc next")},
+    {0, XF86XK_AudioMicMute, spawn, SHCMD("amixer set Capture toggle")},
+    /* music control */
+    {0, XF86XK_Favorites, spawn, SHCMD("mpc toggle")},
+    {0, XK_End, spawn, SHCMD("mpc next")},
+    {0, XK_Home, spawn, SHCMD("mpc prev")},
     {0, XF86XK_AudioPlay, spawn, SHCMD("mpc toggle")},
+    {0, XF86XK_AudioNext, spawn, SHCMD("mpc next")},
+    {0, XF86XK_AudioPrev, spawn, SHCMD("mpc prev")},
     {0, XF86XK_AudioStop, spawn, SHCMD("mpc stop")},
     {0, XF86XK_AudioRewind, spawn, SHCMD("mpc seek -10")},
     {0, XF86XK_AudioForward, spawn, SHCMD("mpc seek +10")},
+    /* brightness */
     {0, XF86XK_MonBrightnessUp, spawn,
-     SHCMD("brightness up; kill -35 $(pidof dwmblocks)")},
+     SHCMD("backlight-up; kill -35 $(pidof dwmblocks)")},
     {0, XF86XK_MonBrightnessDown, spawn,
-     SHCMD("brightness down; kill -35 $(pidof dwmblocks)")},
+     SHCMD("backlight-down; kill -35 $(pidof dwmblocks)")},
     /* dwm */
     {MODKEY | SUPKEY, XK_space, togglefloating, {0}},
     {MODKEY, XK_f, togglefullscr, {0}},
@@ -211,8 +217,9 @@ static Key keys[] = {
     {MODKEY | ShiftMask, XK_i, incnmaster, {.i = -1}},
     {MODKEY | ShiftMask, XK_j, movestack, {.i = +1}},
     {MODKEY | ShiftMask, XK_k, movestack, {.i = -1}},
-    {SUPKEY | ShiftMask, XK_Right, shiftview, {.i = +1}},
-    {SUPKEY | ShiftMask, XK_Left, shiftview, {.i = -1}},
+    {SUPKEY, XK_Right, shiftview, {.i = +1}},
+    {SUPKEY, XK_Left, shiftview, {.i = -1}},
+    /* cfacts and mfacts */
     {SUPKEY, XK_j, setcfact, {.f = +0.25}},
     {SUPKEY, XK_k, setcfact, {.f = -0.25}},
     {SUPKEY, XK_h, setmfact, {.f = -0.05}},

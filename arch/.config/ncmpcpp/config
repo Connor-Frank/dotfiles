@@ -64,7 +64,7 @@ ask_before_clearing_playlists = "no"
 discard_colors_if_item_is_selected = "no"
 display_volume_level = "no"
 screen_switcher_mode = media_library, playlist, browser, visualizer, clock
-startup_screen = media_library
+startup_screen = playlist
 
 # Visualizer ..
 visualizer_data_source = "/tmp/mpd.fifo"

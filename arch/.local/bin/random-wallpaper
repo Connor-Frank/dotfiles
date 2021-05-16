@@ -2,4 +2,4 @@
 
 wallpaper=$(shuf -ezn 1 $HOME/.local/wallpapers/*.jpg | xargs -0 -n1 echo)
 
-feh --recursive --bg-fill --randomize $HOME/.local/wallpapers/*.jpg
+feh --recursive --bg-fill --no-fehbg --randomize $HOME/.local/wallpapers/*.jpg
