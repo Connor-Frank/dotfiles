@@ -8,7 +8,7 @@ else
 fi
 
 if [ -z "$2" ]; then
-  echo "input full path (/dev/*) to lacie:"
+  echo "input full path (/dev/*) to $name:"
   read location
 else
   location="$2"
@@ -17,4 +17,6 @@ fi
 sudo cryptsetup luksOpen "$location" "$name"
 mkdir -p "$HOME"/"$name"
 sudo mount /dev/mapper/"$name" "$HOME"/"$name"
+sudo chown -R $(whoami):root "$HOME"/"$name"
 echo "$location opened and mounted on "$HOME"/$name"
+echo "you have full ownership of the device"
