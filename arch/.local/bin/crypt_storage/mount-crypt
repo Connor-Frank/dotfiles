@@ -17,6 +17,4 @@ fi
 sudo cryptsetup luksOpen "$location" "$name"
 mkdir -p "$HOME"/"$name"
 sudo mount /dev/mapper/"$name" "$HOME"/"$name"
-sudo chown -R $(whoami):root "$HOME"/"$name"
 echo "$location opened and mounted on "$HOME"/$name"
-echo "you have full ownership of the device"
