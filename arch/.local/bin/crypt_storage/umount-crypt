@@ -2,16 +2,16 @@
 
 if [ -z "$1" ]; then
   echo "some possible devices:"
-  find ~/ -maxdepth 1 -group root -type d
-  echo "input name to unmount (mounted on "$HOME"/<name>):"
+  find /mnt -mindepth 1 -maxdepth 1 -group root -type d
+  echo "input name to unmount (mounted on /mnt/<name>):"
   read name
 else
   name="$1"
 fi
 
-[ ! -d "$HOME"/"$name" ] && echo "directory "$HOME"/$name does not exist." && exit
+[ ! -d /mnt/"$name" ] && echo "directory /mnt/$name does not exist." && exit
 
-sudo umount "$HOME"/"$name"
+sudo umount /mnt/"$name"
 sudo cryptsetup luksClose "$name"
-rmdir "$HOME"/"$name"
-echo "device $name closed and unmounted from "$HOME"/$name"
+sudo rmdir /mnt/"$name"
+echo "device $name closed and unmounted from /mnt/$name"
