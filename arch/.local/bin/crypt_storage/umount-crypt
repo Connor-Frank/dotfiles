@@ -1,0 +1,10 @@
+#!/bin/sh
+
+echo "input name to unmount:"
+read name
+
+[ ! -d ~/"$name" ] && echo "directory ~/$name does not exist." && exit
+
+sudo umount ~/"$name"
+sudo cryptsetup luksClose "$name"
+rmdir ~/"$name"

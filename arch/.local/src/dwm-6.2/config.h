@@ -272,10 +272,10 @@ static Key keys[] = {
     {SUPKEY | ShiftMask, XK_l, moveresize, {.v = "0x 0y 25w 0h"}},
     {SUPKEY | ShiftMask, XK_h, moveresize, {.v = "0x 0y -25w 0h"}},
     /* monitors */
-    {SUPKEY, XK_comma, focusmon, {.i = -1}},
-    {SUPKEY, XK_period, focusmon, {.i = +1}},
-    {SUPKEY | ShiftMask, XK_comma, tagmon, {.i = -1}},
-    {SUPKEY | ShiftMask, XK_period, tagmon, {.i = +1}},
+    {SUPKEY | MODKEY, XK_j, focusmon, {.i = +1}},
+    {SUPKEY | MODKEY, XK_k, focusmon, {.i = -1}},
+    {SUPKEY | MODKEY, XK_l, tagmon, {.i = +1}},
+    {SUPKEY | MODKEY, XK_h, tagmon, {.i = -1}},
     /* desktop names */
     TAGKEYS(XK_1, 0) TAGKEYS(XK_2, 1) TAGKEYS(XK_3, 2) TAGKEYS(XK_4, 3)
         TAGKEYS(XK_5, 4) TAGKEYS(XK_6, 5) TAGKEYS(XK_7, 6) TAGKEYS(XK_8, 7)

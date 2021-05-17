@@ -1,4 +1,4 @@
 #!/bin/sh
 
 sudo xbacklight -dec 10
-notify-send "brightness $(xbacklight -get)" -t 750
+notify-send "brightness $(xbacklight -get)" -t 500

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+echo "input name of device:"
+read name
+echo "input full path (/dev/*) of lacie:"
+read location
+
+sudo cryptsetup luksOpen "$location" "$name"
+mkdir -p ~/"$name"
+sudo mount /dev/mapper/"$name" ~/"$name"
