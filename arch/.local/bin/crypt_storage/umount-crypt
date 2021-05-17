@@ -1,10 +1,17 @@
 #!/bin/sh
 
-echo "input name to unmount:"
-read name
+if [ -z "$1" ]; then
+  echo "some possible devices:"
+  find ~/ -maxdepth 1 -group root -type d
+  echo "input name to unmount (mounted on "$HOME"/<name>):"
+  read name
+else
+  name="$1"
+fi
 
-[ ! -d ~/"$name" ] && echo "directory ~/$name does not exist." && exit
+[ ! -d "$HOME"/"$name" ] && echo "directory "$HOME"/$name does not exist." && exit
 
-sudo umount ~/"$name"
+sudo umount "$HOME"/"$name"
 sudo cryptsetup luksClose "$name"
-rmdir ~/"$name"
+rmdir "$HOME"/"$name"
+echo "device $name closed and unmounted from "$HOME"/$name"

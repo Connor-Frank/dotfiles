@@ -1,10 +1,20 @@
 #!/bin/sh
 
-echo "input name of device:"
-read name
-echo "input full path (/dev/*) of lacie:"
-read location
+if [ -z "$1" ]; then
+  echo "input name of device (mounted on "$HOME"/<name>):"
+  read name
+else
+  name="$1"
+fi
+
+if [ -z "$2" ]; then
+  echo "input full path (/dev/*) to lacie:"
+  read location
+else
+  location="$2"
+fi
 
 sudo cryptsetup luksOpen "$location" "$name"
-mkdir -p ~/"$name"
-sudo mount /dev/mapper/"$name" ~/"$name"
+mkdir -p "$HOME"/"$name"
+sudo mount /dev/mapper/"$name" "$HOME"/"$name"
+echo "$location opened and mounted on "$HOME"/$name"
