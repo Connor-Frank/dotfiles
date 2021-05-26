@@ -154,6 +154,7 @@ static Key keys[] = {
            "/dev/video[0,2,4,6,8] | tail -n 1)")},
     {SUPKEY, XK_s, spawn, {.v = sbuild}},
     {SUPKEY, XK_w, spawn, SHCMD("monero-wallet-gui")},
+    {SUPKEY, XK_d, spawn, SHCMD("dogecoin-qt")},
     /*
      * scratchpads:
      * 0 - terminal

@@ -56,6 +56,9 @@ Plug 'morhetz/gruvbox'
 ""Plug 'arzg/vim-colors-xcode'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
+Plug 'neovim/nvim-lspconfig'
+Plug 'kabouzeid/nvim-lspinstall'
+
 "markdown writing
 Plug 'kana/vim-textobj-user', {'for': 'markdown'}
 Plug 'preservim/vim-textobj-quote', {'for': 'markdown'}
