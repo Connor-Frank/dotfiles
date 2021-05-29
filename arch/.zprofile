@@ -38,8 +38,10 @@ export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
 export WEECHAT_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/weechat"
 export MBSYNCRC="${XDG_CONFIG_HOME:-$HOME/.config}/mbsync/config"
 export ELECTRUMDIR="${XDG_DATA_HOME:-$HOME/.local/share}/electrum"
-export PYENV_ROOT="$HOME/.local/pyenv"
 
 # other settings:
 export FZF_DEFAULT_OPTS="--layout=reverse" #--height 40%"
 export _JAVA_AWT_WM_NONREPARENTING=1  # Fix for Java applications in dwm
+export PYENV_ROOT="$HOME/.local/pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
