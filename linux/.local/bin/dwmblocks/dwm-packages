@@ -5,7 +5,7 @@ wifistatus="$(cat /sys/class/net/w*/operstate 2>/dev/null)"
 name="$(cat /etc/*-release | sed -n 1p)"
 
 if [ "$name" = "NAME=\"Arch Linux\"" ]; then
-  if [ "$wifistatus" = "up"]; then
+  if [ "$wifistatus" = "up" ]; then
     package_count="$(pacman -Q 2>/dev/null | wc -l)"
     updates_arch="$(checkupdates 2>/dev/null | wc -l)"
     updates_aur="$(yay -Qua --devel 2>/dev/null | wc -l)"

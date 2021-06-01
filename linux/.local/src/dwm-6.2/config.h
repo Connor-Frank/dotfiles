@@ -41,9 +41,9 @@ typedef struct {
   const char *name;
   const void *cmd;
 } Sp;
-const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL};
+const char *spcmd1[] = {"st", "-n", "spterm", "-g", "130x34", NULL};
 const char *spcmd2[] = {"st",     "-n", "spfiles", "-g",
-                        "150x45", "-e", "ranger",  NULL};
+                        "155x45", "-e", "ranger",  NULL};
 const char *spcmd3[] = {"st",     "-n", "spcalc", "-g",
                         "100x25", "-e", "calc",   NULL};
 const char *spcmd4[] = {"keepassxc", NULL};
@@ -175,6 +175,7 @@ static Key keys[] = {
     {SUPKEY, XK_o, spawn, SHCMD("libreoffice")},
     {MODKEY, XK_space, spawn, SHCMD("brave")},
     {MODKEY | ControlMask, XK_space, spawn, SHCMD("google-chrome-stable")},
+    {SUPKEY | ControlMask, XK_space, spawn, SHCMD("firefox")},
     {MODKEY | ShiftMask, XK_space, spawn, SHCMD("tor-browser")},
     /* resets */
     {SUPKEY, XK_r, spawn, SHCMD("kill -37 $(pidof dwmblocks)")},

@@ -2,7 +2,7 @@
 
 echo "building all sudo make install-ed software"
 returnto=$(pwd)
-cd ~/.local/src
+cd ~/dotfiles/linux/.local/src
 for folder in *; do
   cd $folder
   pwd && echo
