@@ -1,17 +1,19 @@
 general/.vim/pack
 general/.vim/autoload
+general/.vim/sessions
+.netrwhist
 general/.config/nvim/pack
+Session.vim
 
-*.o
+
+mac/.local/*
 
 private
 share
 pyenv
 arch/.local/pacman-list
-general/.vim/sessions
-.netrwhist
-Session.vim
 
+*.o
 *.zwc
 .DS_Store
 *.log
