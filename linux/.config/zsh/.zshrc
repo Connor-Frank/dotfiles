@@ -8,14 +8,11 @@ ll=$(last -1 $USER | head -1 | cut -c 40-55)
 on=$(last -1 $USER | head -1 | cut -c 10-20)
 echo "Last login: $ll on $on"
 
-eval "$(pyenv init -)"
-eval $(thefuck --alias)
+#eval "$(pyenv init -)"
+#eval $(thefuck --alias)
 
-# this fixes a problem with incomplete zshrc sourcing
 alias s='source ~/.config/zsh/.zshrc > /dev/null 2>&1'
-
 alias name='uname -snrmo'
-alias comp='picom'
 alias logins='last -f /var/log/wtmp | less'
 
 ## things that autoreload dwmblocks
@@ -40,14 +37,5 @@ function neomutt {
 alias cmatrix='ncmatrix'
 
 alias upd='sudo reflector --verbose --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist && cat /etc/pacman.d/mirrorlist'
-
-pacdump() {
-  pacgraph -f ~/dotfiles/package-lists/arch/pacgraph
-  pacman -Qe | cut -d' ' -f1 > ~/.local/pacman-list
-}
-
-if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-  exec startx "$XDG_CONFIG_HOME/x11/xinitrc"
-fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

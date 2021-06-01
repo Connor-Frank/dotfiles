@@ -1,0 +1,27 @@
+#!/bin/sh
+
+wifistatus="$(cat /sys/class/net/w*/operstate 2>/dev/null)"
+
+name="$(cat /etc/*-release | sed -n 1p)"
+
+if [ "$name" = "NAME=\"Arch Linux\"" ]; then
+  if [ "$wifistatus" = "up"]; then
+    package_count="$(pacman -Q 2>/dev/null | wc -l)"
+    updates_arch="$(checkupdates 2>/dev/null | wc -l)"
+    updates_aur="$(yay -Qua --devel 2>/dev/null | wc -l)"
+    updates="$(($updates_arch + $updates_aur))"
+    if [ "$updates" -ge 1 ]; then
+      echo " $package_count  $updates"
+    elif [ "$updates" -eq 0 ]; then
+      echo " $package_count"
+    fi
+  else
+    package_count="$(pacman -Q 2>/dev/null | wc -l)"
+    echo " $package_count"
+  fi
+elif [ "$name" = "NAME=\"void\"" ]; then
+  package_count="$(xbps-query -l | wc -l)"
+  echo " $package_count"
+else
+  echo "wrong os"
+fi

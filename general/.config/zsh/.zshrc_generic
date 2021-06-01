@@ -63,4 +63,4 @@ unalias ls
 alias ls='exa'
 
 source ~/.config/zsh/fsh/fast-syntax-highlighting.plugin.zsh 2> /dev/null
-source ~/mining/miningconf.zsh
+[ -f ~/.local/options.zsh ] && source ~/.local/options.zsh

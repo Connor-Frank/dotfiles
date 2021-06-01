@@ -1,0 +1,26 @@
+#!/bin/sh
+
+name="$(cat /etc/*-release | sed -n 1p)"
+
+#   🔒  
+w=" cancel\n lock\n suspend\n reboot\n shutdown"
+c=$(echo $w | dmenu -c -p " power" -i -l 5)
+if [ "$c" == " cancel" ]; then
+  exit
+fi
+
+if [ "$name" = "$NAME=\"Arch Linux\"" ]; then
+  case "$c" in
+    " lock") slock;;
+    " suspend") systemctl suspend;;
+    " reboot") reboot;;
+    " shutdown") shutdown now;;
+  esac;
+elif [ "$name" = "NAME=\"void\"" ]; then
+  case "$c" in
+    " lock") slock;;
+    " suspend") systemctl suspend;;
+    " reboot") sudo runit-init 6;;
+    " shutdown") sudo runit-init 0;;
+  esac;
+fi

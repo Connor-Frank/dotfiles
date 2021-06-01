@@ -5,13 +5,13 @@ general/.vim/sessions
 general/.config/nvim/pack
 Session.vim
 
-
 mac/.local/*
 
-private
-share
-pyenv
-arch/.local/pacman-list
+linux/.local/*
+!linux/.local/bin
+linux/.local/bin/pip*
+!linux/.local/src
+!linux/.local/wallpapers
 
 *.o
 *.zwc

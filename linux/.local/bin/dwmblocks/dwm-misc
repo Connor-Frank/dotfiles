@@ -7,12 +7,6 @@ else
   wifi="睊"
 fi
 
-cpufreq="$(cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor 2>/dev/null)"
-case "$cpufreq" in
-  "powersave") speed="ﲦ" ;;
-  "performance") speed="ﲪ" ;;
-esac
-
 unread="$(find "${XDG_DATA_HOME:-$HOME/.local/share}"/mail/*/[Ii][Nn][Bb][Oo][Xx]/new/* -type f 2>/dev/null | wc -l)"
 if [ "$unread" = "0" ]; then
   mail=""
@@ -23,8 +17,5 @@ fi
 c() {
   echo "$*" | sed 's/x/\*/g' | bc -l
 }
-
-bright=$(c $(brightness | awk '{print $4}')x100)
-monitor=${bright%.*}"%"
 
 echo "$wifi$mail"

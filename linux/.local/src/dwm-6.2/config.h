@@ -70,8 +70,6 @@ static const Rule rules[] = {
     /* class, instance, title, tags mask, iscentered, isfloating,
        isfakefullscreen, monitor */
     {"termapp", NULL, NULL, 0, 1, 1, 0, -1},
-    {"Gimp", NULL, NULL, 0, 1, -1},
-    {"Firefox", NULL, NULL, 1 << 8, 0, -1},
     {NULL, "spterm", NULL, SPTAG(0), 1, -1},
     {NULL, "spfiles", NULL, SPTAG(1), 1, -1},
     {NULL, "spcalc", NULL, SPTAG(2), 1, -1},
