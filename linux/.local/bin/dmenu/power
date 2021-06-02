@@ -9,7 +9,7 @@ if [ "$c" == " cancel" ]; then
   exit
 fi
 
-if [ "$name" = "$NAME=\"Arch Linux\"" ]; then
+if [ "$name" = "NAME=\"Arch Linux\"" ]; then
   case "$c" in
     " lock") slock;;
     " suspend") systemctl suspend;;

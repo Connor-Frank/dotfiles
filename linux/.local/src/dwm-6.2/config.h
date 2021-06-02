@@ -174,9 +174,9 @@ static Key keys[] = {
     {SUPKEY, XK_m, togglescratch, {.ui = 7}},
     {SUPKEY, XK_o, spawn, SHCMD("libreoffice")},
     {MODKEY, XK_space, spawn, SHCMD("brave")},
-    {MODKEY | ControlMask, XK_space, spawn, SHCMD("google-chrome-stable")},
-    {SUPKEY | ControlMask, XK_space, spawn, SHCMD("firefox")},
-    {MODKEY | ShiftMask, XK_space, spawn, SHCMD("tor-browser")},
+    {MODKEY | ControlMask, XK_space, spawn, SHCMD("firefox")},
+    {MODKEY | ControlMask | ShiftMask, XK_space, spawn, SHCMD("tor-browser")},
+    {MODKEY | ShiftMask, XK_space, spawn, SHCMD("google-chrome-stable")},
     /* resets */
     {SUPKEY, XK_r, spawn, SHCMD("kill -37 $(pidof dwmblocks)")},
     {SUPKEY | ShiftMask, XK_r, spawn, SHCMD("kill -35 $(pidof dwmblocks)")},
