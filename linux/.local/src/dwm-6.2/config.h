@@ -41,23 +41,26 @@ typedef struct {
   const char *name;
   const void *cmd;
 } Sp;
-const char *spcmd1[] = {"st", "-n", "spterm", "-g", "130x34", NULL};
-const char *spcmd2[] = {"st",     "-n", "spfiles", "-g",
+const char *spcmd0[] = {"st", "-n", "spterm", "-g", "130x34", NULL};
+const char *spcmd1[] = {"st",     "-n", "spfiles", "-g",
                         "155x45", "-e", "ranger",  NULL};
-const char *spcmd3[] = {"st",     "-n", "spcalc", "-g",
+const char *spcmd2[] = {"st",     "-n", "spcalc", "-g",
                         "100x25", "-e", "calc",   NULL};
-const char *spcmd4[] = {"keepassxc", NULL};
-const char *spcmd5[] = {"st",     "-n", "spmusic", "-g",
+const char *spcmd3[] = {"keepassxc", NULL};
+const char *spcmd4[] = {"st",     "-n", "spmusic", "-g",
                         "150x40", "-e", "ncmpcpp", NULL};
-const char *spcmd6[] = {"st",     "-n", "spmixer",    "-g",
+const char *spcmd5[] = {"st",     "-n", "spmixer",    "-g",
                         "100x25", "-e", "pulsemixer", NULL};
-const char *spcmd7[] = {"st", "-n", "sptop", "-g", "150x40", "-e", "htop"};
-const char *spcmd8[] = {"st", "-n", "spmail", "-g", "150x40", "-e", "neomutt"};
+const char *spcmd6[] = {"st", "-n", "sptop", "-g", "150x40", "-e", "htop"};
+const char *spcmd7[] = {"st", "-n", "spmail", "-g", "150x40", "-e", "neomutt"};
+const char *spcmd8[] = {"monero-wallet-gui", NULL};
+const char *spcmd9[] = {"dogecoin-qt", NULL};
 static Sp scratchpads[] = {
     /* name, cmd  */
-    {"spterm", spcmd1},    {"spranger", spcmd2}, {"spcalc", spcmd3},
-    {"keepassxc", spcmd4}, {"ncmpcpp", spcmd5},  {"pulsemixer", spcmd6},
-    {"htop", spcmd7},      {"neomutt", spcmd8},
+    {"spterm", spcmd0},     {"spranger", spcmd1}, {"spcalc", spcmd2},
+    {"keepassxc", spcmd3},  {"ncmpcpp", spcmd4},  {"pulsemixer", spcmd5},
+    {"htop", spcmd6},       {"neomutt", spcmd7},  {"xmrwallet", spcmd8},
+    {"dogewallet", spcmd9},
 };
 
 /* tags */
@@ -78,6 +81,8 @@ static const Rule rules[] = {
     {NULL, "spmixer", NULL, SPTAG(5), 1, -1},
     {NULL, "sptop", NULL, SPTAG(6), 1, -1},
     {NULL, "spmail", NULL, SPTAG(7), 1, -1},
+    {NULL, "monero-wallet-gui", NULL, SPTAG(8), 0, -1},
+    {NULL, "dogecoin-qt", NULL, SPTAG(9), 0, -1},
 };
 
 /* layout */
@@ -151,8 +156,6 @@ static Key keys[] = {
            "--profile=low-latency --input-conf=/dev/null --title=webcam $(ls "
            "/dev/video[0,2,4,6,8] | tail -n 1)")},
     {SUPKEY, XK_s, spawn, {.v = sbuild}},
-    {SUPKEY, XK_w, spawn, SHCMD("monero-wallet-gui")},
-    {SUPKEY, XK_d, spawn, SHCMD("dogecoin-qt")},
     /*
      * scratchpads:
      * 0 - terminal
@@ -172,6 +175,10 @@ static Key keys[] = {
     {SUPKEY, XK_a, togglescratch, {.ui = 5}},
     {SUPKEY, XK_x, togglescratch, {.ui = 6}},
     {SUPKEY, XK_m, togglescratch, {.ui = 7}},
+    //{SUPKEY, XK_w, spawn, SHCMD("monero-wallet-gui")},
+    {SUPKEY, XK_w, togglescratch, {.ui = 8}},
+    //{SUPKEY, XK_d, spawn, SHCMD("dogecoin-qt")},
+    {SUPKEY, XK_d, togglescratch, {.ui = 9}},
     {SUPKEY, XK_o, spawn, SHCMD("libreoffice")},
     {MODKEY, XK_space, spawn, SHCMD("brave")},
     {MODKEY | ControlMask, XK_space, spawn, SHCMD("firefox")},
