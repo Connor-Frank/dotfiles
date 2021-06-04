@@ -56,7 +56,7 @@ function tmx {
 alias clock='tty-clock -s -c -f "%d.%m.%Y"'
 
 # a cool clock i found (https://github.com/joshdk/tty-qlock)
-alias textclock='~/sync/scripts/tty-qlock-1.0.0/./dist/qlock -on-color green'
+alias textclock='~/sync/scripts/tty-qlock-1.0.0/dist/qlock -on-color green'
 
 # exa is a cooler ls command that is colored and has file/folder icons
 unalias ls
