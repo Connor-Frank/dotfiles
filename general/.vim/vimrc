@@ -103,5 +103,6 @@ highlight Comment guibg=green ctermfg=green
 highlight Visual guibg=blue ctermfg=blue
 highlight Search guibg=blue ctermbg=blue term=underline
 highlight IncSearch guibg=blue ctermbg=blue term=underline
+highlight SpellBad guibg=red ctermbg=red
 highlight clear SignColumn
 highlight clear CursorLine
