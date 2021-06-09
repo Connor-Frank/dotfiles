@@ -1,9 +1,9 @@
 # dotfiles
 My dotfiles. I keep my general (cross-platform) files in [general](general) and my system-specific files in [arch](arch) and [mac](mac) respectfully.
 
-I mainly use Linux (because it's better and I like it much more, especially for development) but I try to maintain my Mac configuration too, because having a "normie" machine is necessary sometimes. I'd like to be able to have a similar workflow if I ever need to do some coding on Mac.
+I mainly use Linux (because it's better, more lightweight, more secure, and I like it much more, especially for development) but I try to maintain my Mac configuration too, because having a "normie" machine is necessary sometimes for school. I'd like to be able to have a similar workflow if I ever need to do some coding on a Mac.
 
-For shell scripts, I use dash. On Arch Linux you can use [dashbinsh](https://aur.archlinux.org/packages/dashbinsh/) to symlink it to `/bin/sh`.
+For shell scripts, I use dash. On Arch Linux you can use [dashbinsh](https://aur.archlinux.org/packages/dashbinsh/) to symlink it to `/bin/sh`. On other distributions you can do it manually using `sudo ln -sf dash /bin/sh`.
 
 ## Attributions
 
@@ -16,19 +16,7 @@ Make sure to clone submodules, otherwise zsh syntax highlighting won't work:
 git submodule update --init
 ```
 
-I use [GNU stow](https://www.gnu.org/software/stow/manual/stow.html) to make these easy to symlink. General files should be stowed regardless of operating system. 
-
-For Arch Linux:
-```
-stow general
-stow arch
-```
-For MacOS:
-```
-stow general
-stow mac
-```
-To un-stow things, use `stow -D <package-name>`, and to re-stow things, use `stow -R <package-name>`.
+There are two scripts to link configs, the aptly-named `link.sh` and `unlink.sh`. Run these scripts using either `./link.sh` or `./unlink.sh`, depending on which one you need.
 
 ## Notes on the scripts
 

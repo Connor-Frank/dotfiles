@@ -1,17 +1,18 @@
 #!/bin/sh
 
-if [ -z "$1" ]; then
-  echo "input name of device (mounted on /mnt/<name>):"
+if [ -z "$2" ]; then
+  echo "input name of device (to be mounted on /mnt/<name>):"
   read name
 else
-  name="$1"
+  name="$2"
 fi
 
-if [ -z "$2" ]; then
+if [ -z "$1" ]; then
+  lsblk
   echo "input full path (/dev/*) to $name:"
   read location
 else
-  location="$2"
+  location="$1"
 fi
 
 sudo cryptsetup luksOpen "$location" "$name"
