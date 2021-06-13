@@ -20,7 +20,7 @@ Plug 'ojroques/vim-scrollstatus'
 Plug 'ryanoasis/vim-devicons'
 
 "fuzzy search + files
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'dir': '~/.local/share/fzf', 'do': './install --all --no-bash --no-fish' }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on': 'NERDTreeToggle' }
