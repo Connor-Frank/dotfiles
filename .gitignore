@@ -10,6 +10,7 @@ Session.vim
 .DS_Store
 *.log
 
+linux/.local/bin/private
 linux/.local/src/blocks/dwmblocks
 linux/.local/src/st/st
 linux/.local/src/slock-1.4/slock
