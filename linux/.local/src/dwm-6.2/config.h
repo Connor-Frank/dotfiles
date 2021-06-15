@@ -73,16 +73,16 @@ static const Rule rules[] = {
     /* class, instance, title, tags mask, iscentered, isfloating,
        isfakefullscreen, monitor */
     {"termapp", NULL, NULL, 0, 1, 1, 0, -1},
-    {NULL, "spterm", NULL, SPTAG(0), 1, -1},
-    {NULL, "spfiles", NULL, SPTAG(1), 1, -1},
-    {NULL, "spcalc", NULL, SPTAG(2), 1, -1},
-    {NULL, "keepassxc", NULL, SPTAG(3), 0, -1},
-    {NULL, "spmusic", NULL, SPTAG(4), 1, -1},
-    {NULL, "spmixer", NULL, SPTAG(5), 1, -1},
-    {NULL, "sptop", NULL, SPTAG(6), 1, -1},
-    {NULL, "spmail", NULL, SPTAG(7), 1, -1},
-    {NULL, "monero-wallet-gui", NULL, SPTAG(8), 0, -1},
-    {NULL, "dogecoin-qt", NULL, SPTAG(9), 0, -1},
+    {NULL, "spterm", NULL, SPTAG(0), 0, 1, 0, -1},
+    {NULL, "spfiles", NULL, SPTAG(1), 0, 1, 0, -1},
+    {NULL, "spcalc", NULL, SPTAG(2), 0, 1, 0, -1},
+    {NULL, "keepassxc", NULL, SPTAG(3), 0, 1, 0, -1},
+    {NULL, "spmusic", NULL, SPTAG(4), 0, 1, 0, -1},
+    {NULL, "spmixer", NULL, SPTAG(5), 0, 1, 0, -1},
+    {NULL, "sptop", NULL, SPTAG(6), 0, 1, 0, -1},
+    {NULL, "spmail", NULL, SPTAG(7), 0, 1, 0, -1},
+    {NULL, "monero-wallet-gui", NULL, SPTAG(8), 0, 1, 0, -1},
+    {NULL, "dogecoin-qt", NULL, SPTAG(9), 0, 1, 0, -1},
 };
 
 /* layout */
