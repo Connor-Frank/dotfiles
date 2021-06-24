@@ -1,7 +1,8 @@
 #!/bin/sh
 
 wifistatus="$(cat /sys/class/net/w*/operstate 2>/dev/null)"
-if [ "$wifistatus" = "up" ]; then
+cablestatus="$(cat /sys/class/net/e*/operstate 2> /dev/null)"
+if [ "$wifistatus" = "up" -o "$cablestatus" = "up" ]; then
   wifi="直"
 else
   wifi="睊"

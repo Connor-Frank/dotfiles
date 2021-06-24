@@ -3,6 +3,8 @@
 # https://www.nerdfonts.com/cheat-sheet
 # nf-mdi icons
 
+[ "$(ls -A /sys/class/power_supply)" ] || echo "襤"; exit
+
 # loop through all attached batteries and format the info
 for battery in /sys/class/power_supply/BAT?*; do
   # if non-first battery, print a space separator.
