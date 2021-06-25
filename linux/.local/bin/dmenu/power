@@ -19,7 +19,7 @@ if [ "$name" = "NAME=\"Arch Linux\"" ]; then
 elif [ "$name" = "NAME=\"void\"" ]; then
   case "$c" in
     " lock") slock;;
-    " suspend") systemctl suspend;;
+    " suspend") sudo zzz;;
     " reboot") sudo runit-init 6;;
     " shutdown") sudo runit-init 0;;
   esac;
