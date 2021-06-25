@@ -3,7 +3,9 @@
 # https://www.nerdfonts.com/cheat-sheet
 # nf-mdi icons
 
-if [ !"$(ls -A /sys/class/power_supply)" ]; then
+if [ "$(ls -A /sys/class/power_supply)" ]; then
+  break
+else
   echo "襤"
   exit
 fi
