@@ -13,6 +13,6 @@ else
   ln -sf ~/dotfiles/linux/.zshrc ~/.zshrc
   ln -sf ~/dotfiles/linux/.config/* ~/.config
   ln -sf ~/dotfiles/linux/.local/bin/* ~/.local/bin
-  ln -sf ~/dotfiles/linux/.local/src/* ~/.local/bin
-  ln -sf ~/dotfiles/linux/.local/wallpapers/* ~/.local/bin
+  ln -sf ~/dotfiles/linux/.local/src/* ~/.local/src
+  ln -sf ~/dotfiles/linux/.local/wallpapers/* ~/.local/wallpapers
 fi
