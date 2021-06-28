@@ -155,7 +155,7 @@ static Key keys[] = {
      SHCMD("mpv --no-cache --no-osc --no-input-default-bindings "
            "--profile=low-latency --input-conf=/dev/null --title=webcam $(ls "
            "/dev/video[0,2,4,6,8] | tail -n 1)")},
-    {SUPKEY, XK_s, spawn, {.v = sbuild}},
+    {SUPKEY, XK_b, spawn, {.v = sbuild}},
     /*
      * scratchpads:
      * 0 - terminal
@@ -178,7 +178,9 @@ static Key keys[] = {
     {SUPKEY, XK_x, togglescratch, {.ui = 6}},
     {SUPKEY, XK_m, togglescratch, {.ui = 7}},
     {SUPKEY, XK_w, togglescratch, {.ui = 8}},
-    {SUPKEY, XK_d, togglescratch, {.ui = 9}},
+    {SUPKEY, XK_e, togglescratch, {.ui = 9}},
+    {SUPKEY, XK_d, spawn, SHCMD("discord")},
+    {SUPKEY, XK_s, spawn, SHCMD("slack")},
     {SUPKEY, XK_v, spawn, SHCMD("openshot-qt")},
     {SUPKEY, XK_g, spawn, SHCMD("gimp")},
     {SUPKEY, XK_i, spawn, SHCMD("inkscape")},
