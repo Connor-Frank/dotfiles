@@ -35,13 +35,27 @@ enum glyph_attribute {
   ATTR_WDUMMY = 1 << 10,
   ATTR_BOXDRAW = 1 << 11,
   ATTR_BOLD_FAINT = ATTR_BOLD | ATTR_FAINT,
+
 };
 
-enum selection_mode { SEL_IDLE = 0, SEL_EMPTY = 1, SEL_READY = 2 };
+enum selection_mode {
+  SEL_IDLE = 0,
+  SEL_EMPTY = 1,
+  SEL_READY = 2
 
-enum selection_type { SEL_REGULAR = 1, SEL_RECTANGULAR = 2 };
+};
 
-enum selection_snap { SNAP_WORD = 1, SNAP_LINE = 2 };
+enum selection_type {
+  SEL_REGULAR = 1,
+  SEL_RECTANGULAR = 2
+
+};
+
+enum selection_snap {
+  SNAP_WORD = 1,
+  SNAP_LINE = 2
+
+};
 
 typedef unsigned char uchar;
 typedef unsigned int uint;
@@ -56,6 +70,7 @@ typedef struct {
   ushort mode; /* attribute flags */
   uint32_t fg; /* foreground  */
   uint32_t bg; /* background  */
+
 } Glyph;
 
 typedef Glyph *Line;
@@ -66,6 +81,7 @@ typedef union {
   float f;
   const void *v;
   const char *s;
+
 } Arg;
 
 void die(const char *, ...);
