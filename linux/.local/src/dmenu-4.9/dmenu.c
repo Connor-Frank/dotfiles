@@ -649,9 +649,9 @@ static void setup(void) {
           break;
 
     /* center
-    x = info[i].x_org;
-    y = info[i].y_org + (topbar ? 0 : info[i].height - mh);
-    mw = info[i].width;*/
+       x = info[i].x_org;
+       y = info[i].y_org + (topbar ? 0 : info[i].height - mh);
+       mw = info[i].width;*/
     /*center*/
     if (centered) {
       mw = MIN(MAX(max_textw() + promptw, min_width), info[i].width);
@@ -670,9 +670,9 @@ static void setup(void) {
     if (!XGetWindowAttributes(dpy, parentwin, &wa))
       die("could not get embedding window attributes: 0x%lx", parentwin);
     /* center
-    x = 0;
-    y = topbar ? 0 : wa.height - mh;
-    mw = wa.idth;*/
+       x = 0;
+       y = topbar ? 0 : wa.height - mh;
+       mw = wa.idth;*/
     /*center*/
     if (centered) {
       mw = MIN(MAX(max_textw() + promptw, min_width), wa.width);
@@ -686,7 +686,7 @@ static void setup(void) {
     /*center*/
   }
   /* center
-  promptw = (prompt && *prompt) ? TEXTW(prompt) - lrpad / 4 : 0;*/
+     promptw = (prompt && *prompt) ? TEXTW(prompt) - lrpad / 4 : 0;*/
   inputw = MIN(inputw, mw / 3);
   match();
 

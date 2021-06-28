@@ -166,6 +166,8 @@ static Key keys[] = {
      * 5 - audio mixer
      * 6 - htop
      * 7 - mail
+     * 8 - monero wallet
+     * 9 - dogecoin wallet
      */
     {SUPKEY, XK_t, togglescratch, {.ui = 0}},
     {SUPKEY, XK_f, togglescratch, {.ui = 1}},
@@ -175,10 +177,11 @@ static Key keys[] = {
     {SUPKEY, XK_a, togglescratch, {.ui = 5}},
     {SUPKEY, XK_x, togglescratch, {.ui = 6}},
     {SUPKEY, XK_m, togglescratch, {.ui = 7}},
-    //{SUPKEY, XK_w, spawn, SHCMD("monero-wallet-gui")},
     {SUPKEY, XK_w, togglescratch, {.ui = 8}},
-    //{SUPKEY, XK_d, spawn, SHCMD("dogecoin-qt")},
     {SUPKEY, XK_d, togglescratch, {.ui = 9}},
+    {SUPKEY, XK_v, spawn, SHCMD("openshot-qt")},
+    {SUPKEY, XK_g, spawn, SHCMD("gimp")},
+    {SUPKEY, XK_i, spawn, SHCMD("inkscape")},
     {SUPKEY, XK_o, spawn, SHCMD("libreoffice")},
     {MODKEY, XK_space, spawn, SHCMD("firefox")},
     {MODKEY | ShiftMask, XK_space, spawn, SHCMD("tor-browser")},
