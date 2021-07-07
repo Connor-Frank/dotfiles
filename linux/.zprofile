@@ -46,8 +46,7 @@ export PYENV_ROOT="$HOME/.local/pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 
-[ -f ~/.local/profile_options.zsh ] && source ~/.local/profile_options.zsh
-
 if [ -z "${DISPLAY}" ] && [ "$(fgconsole)" -eq 1 ]; then
+  [ -f ~/.local/profile_options.zsh ] && source ~/.local/profile_options.zsh
   exec startx "$XDG_CONFIG_HOME/x11/xinitrc"
 fi

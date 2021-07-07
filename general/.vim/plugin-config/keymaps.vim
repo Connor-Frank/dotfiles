@@ -1,7 +1,7 @@
 " space-e to toggle tagbar
 nmap <leader>e :TagbarToggle<CR>
 " code formatting
-noremap <leader>lf :FormatCode<CR>
+noremap <leader>a :FormatCode<CR>
 " markdown preview
 nmap <leader>m <Plug>MarkdownPreview
 " latex preview
