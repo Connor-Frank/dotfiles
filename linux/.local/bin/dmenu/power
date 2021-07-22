@@ -1,6 +1,7 @@
 #!/bin/sh
 
 name="$(cat /etc/*-release | sed -n 1p)"
+gentoo_name="$(cat /etc/*-release | sed -n 2p)"
 
 #   🔒  
 w=" cancel\n lock\n suspend\n reboot\n shutdown"
@@ -22,5 +23,12 @@ elif [ "$name" = "NAME=\"void\"" ]; then
     " suspend") sudo zzz;;
     " reboot") sudo runit-init 6;;
     " shutdown") sudo runit-init 0;;
+  esac;
+elif [ "$gentoo_name" = "NAME=Gentoo" ]; then
+  case "$c" in
+    " lock") slock;;
+    " suspend") sudo zzz;;
+    " reboot") sudo reboot;;
+    " shutdown") sudo shutdown now;;
   esac;
 fi

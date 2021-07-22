@@ -59,7 +59,7 @@ alias clock='tty-clock -s -c -f "%d.%m.%Y"'
 alias textclock='~/sync/scripts/tty-qlock-1.0.0/dist/qlock -on-color green'
 
 # exa is a cooler ls command that is colored and has file/folder icons
-unalias ls
+#unalias ls
 alias ls='exa'
 
 source ~/.config/zsh/fsh/fast-syntax-highlighting.plugin.zsh 2> /dev/null
