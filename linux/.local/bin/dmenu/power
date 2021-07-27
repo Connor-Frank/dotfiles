@@ -27,8 +27,7 @@ elif [ "$name" = "NAME=\"void\"" ]; then
 elif [ "$gentoo_name" = "NAME=Gentoo" ]; then
   case "$c" in
     " lock") slock;;
-    " suspend") sudo zzz;;
-    " reboot") sudo reboot;;
-    " shutdown") sudo shutdown now;;
+    " reboot") doas reboot;;
+    " shutdown") doas shutdown -P now;;
   esac;
 fi
