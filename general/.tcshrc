@@ -2,7 +2,7 @@ setenv EDITOR vim
 setenv PAGER less
 setenv BLOCKSIZE    M
 
-alias precmd "source ~/.local/bin/prompt.csh"
+alias precmd "source ~/.prompt.csh"
 
 alias l ls -lah
 alias ls exa
