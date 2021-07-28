@@ -1,12 +1,17 @@
 #!/bin/sh
 
+
 if [ "$(uname -s)" = "Darwin" ]; then
+  ln -s ~/dotfiles/general/.login ~/.login
+  ln -s ~/dotfiles/general/.tcshrc ~/.tcshrc
   ln -s ~/dotfiles/general/.config/* ~/.config
   ln -s ~/dotfiles/general/.vim ~
   ln -s ~/dotfiles/mac/.zshrc ~/.zshrc
   ln -s ~/dotfiles/mac/.local/* ~/.local
   ln -s ~/dotfiles/mac/.iTerm ~
 else
+  ln -sf ~/dotfiles/general/.login ~/.login
+  ln -sf ~/dotfiles/general/.tcshrc ~/.tcshrc
   ln -sf ~/dotfiles/general/.config/* ~/.config
   ln -sf ~/dotfiles/general/.vim ~
   ln -sf ~/dotfiles/linux/.zprofile ~/.zprofile
