@@ -2,21 +2,11 @@ setenv EDITOR vim
 setenv PAGER less
 setenv BLOCKSIZE    M
 
-# colors
-set     red="%{\033[1;31m%}"
-set   green="%{\033[0;32m%}"
-set  yellow="%{\033[1;33m%}"
-set    blue="%{\033[1;34m%}"
-set magenta="%{\033[1;35m%}"
-set    cyan="%{\033[1;36m%}"
-set   white="%{\033[0;37m%}"
-set     end="%{\033[0m%}"
+alias precmd "source ~/.local/bin/prompt.csh"
 
-set prompt="${green}%n${blue}@%m ${white}%~ ${green}%%${end} "
-
+alias l ls -lah
 alias ls exa
-alias l ls -la
 
 set autolist
-
-unset red green yellow blue magenta cyan white end
+set correct = cmd
+bindkey -v
