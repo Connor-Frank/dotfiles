@@ -11,6 +11,6 @@ set     end="%{\033[0m%}"
 setenv GIT_BRANCH_CMD "sh -c 'git branch --no-color 2> /dev/null' | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1] /'"
 
 set windowtitle = "%{\e]2;%N@%m:%~\a%}"
-set prompt="${windowtitle}${red}[${green}%N${blue}@%m${red}] ${yellow}%~ ${cyan}`$GIT_BRANCH_CMD` \n${blue}%? ${white}%%${end} "
+set prompt="${windowtitle}${blue}%? ${red}[${green}%N${blue}@%m${red}] ${yellow}%c ${cyan}`$GIT_BRANCH_CMD`${white}%%${end} "
 
 unset red green yellow blue magenta cyan white end
