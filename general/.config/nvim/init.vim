@@ -19,7 +19,7 @@ if (has('nvim'))
 endif
 
 set background=dark
-colorscheme nord
+"colorscheme nord
 
 "fix bg
 "hi NORMAL guibg=#282c34
@@ -120,7 +120,7 @@ endfunc
 
 "lightline setup
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': 'wombat',
       \ 'active': {
         \   'left': [ [ 'mode', 'paste' ],
         \             [ 'readonly', 'filename', 'filetype', 'modified', 'gitbranch', 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok' ] ],
