@@ -24,7 +24,7 @@ setenv ADOTDIR "${XDG_DATA_HOME}/antigen" # zsh plugins
 setenv WINEPREFIX "${XDG_DATA_HOME}/wineprefixes/default"
 setenv KODI_DATA "${XDG_DATA_HOME}/kodi"
 setenv PASSWORD_STORE_DIR "${XDG_DATA_HOME}/password-store"
-setenv TMUX_TMPDIR "$XDG_RUNTIME_DIR"
+#setenv TMUX_TMPDIR "$XDG_RUNTIME_DIR"
 setenv ANDROID_SDK_HOME "${XDG_CONFIG_HOME}/android"
 setenv CARGO_HOME "${XDG_DATA_HOME}/cargo"
 setenv GOPATH "${XDG_DATA_HOME}/go"
