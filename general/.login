@@ -44,5 +44,6 @@ setenv PATH $PYENV_ROOT/shims:$PATH
 
 
 if ( `fgconsole` == 1 ) then
+  source ~/.local/profile_options.csh
   exec startx "$XDG_CONFIG_HOME/x11/xinitrc"
 endif
