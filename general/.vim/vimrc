@@ -14,15 +14,10 @@ endif
 source $HOME/.vim/options.vim
 " keymaps
 source $HOME/.vim/keymaps.vim
-source $HOME/.vim/plugin-config/keymaps.vim
 " plugin installs
 source $HOME/.vim/plugin-config/master-install.vim
 " plugin config
 source $HOME/.vim/plugin-config/gitgutter.vim
-source $HOME/.vim/plugin-config/autoformat.vim
-source $HOME/.vim/plugin-config/markdown-preview.vim
-source $HOME/.vim/plugin-config/latex-live-preview.vim
-
 " switch between header and source files
 source $HOME/.vim/a.vim
 
@@ -63,42 +58,11 @@ augroup terminalmanagement
   autocmd BufWinEnter,FocusGained * if &buftype == 'terminal' | call TerminalManager() | endif 
 augroup END
 
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'mode_map': {
-        \ 'n' : 'VIM'
-        \ },
-        \ 'component_function': {
-          \'gitbranch': 'gitbranch#name'
-          \ }
-          \ }
-
-let g:lightline.active = {
-      \ 'left': [ [ 'mode', 'paste' ],
-      \           [ 'readonly', 'filename', 'modified', 'gitbranch' ] ],
-      \ 'right': [ [ 'lineinfo' ],
-      \            [ 'percent'  ],
-      \            [ 'fileformat'] ]
-      \ }
-
-let g:lightline.tabline = {
-      \ 'left': [ [ 'tabs' ] ],
-      \ 'right': [ [ 'buffer' ] ]
-      \ }
-
-" for lightline and statusline
-set noshowmode showcmd
-set ruler
-set laststatus=2
-set showtabline=2
-set guioptions-=e
-
 " color and similar options (best to be put last in the vimrc)
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set background=dark
 set notermguicolors
-set colorcolumn=80
 colorscheme peachpuff
 highlight Comment guibg=green ctermfg=green
 highlight Visual guibg=blue ctermfg=blue
