@@ -39,7 +39,7 @@ set noeb vb t_vb= " no bell
 set lazyredraw
 
 " indicators
-set list listchars=tab:>·,trail:~,extends:>,precedes:<,space:·
+"set list listchars=tab:>·,trail:~,extends:>,precedes:<,space:·
 
 " timeouts
 set timeout ttimeout " separate mapping and keycode timeouts
