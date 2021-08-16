@@ -56,13 +56,12 @@ const char *spcmd7[] = {"st", "-n", "spmail", "-g", "150x40", "-e", "neomutt"};
 const char *spcmd8[] = {"monero-wallet-gui", NULL};
 const char *spcmd9[] = {"dogecoin-qt", NULL};
 const char *spcmd10[] = {"discord", NULL};
-const char *spcmd11[] = {"slack", NULL};
 static Sp scratchpads[] = {
     /* name, cmd  */
     {"spterm", spcmd0},     {"spranger", spcmd1}, {"spcalc", spcmd2},
     {"keepassxc", spcmd3},  {"ncmpcpp", spcmd4},  {"pulsemixer", spcmd5},
     {"htop", spcmd6},       {"neomutt", spcmd7},  {"xmrwallet", spcmd8},
-    {"dogewallet", spcmd9}, {"discord", spcmd10}, {"slack", spcmd11},
+    {"dogewallet", spcmd9}, {"discord", spcmd10},
 };
 
 /* tags */
@@ -86,7 +85,6 @@ static const Rule rules[] = {
     {NULL, "monero-wallet-gui", NULL, SPTAG(8), 0, 1, 0, -1},
     {NULL, "dogecoin-qt", NULL, SPTAG(9), 0, 1, 0, -1},
     {NULL, "discord", NULL, SPTAG(10), 0, 1, 0, -1},
-    {NULL, "slack", NULL, SPTAG(11), 0, 1, 0, -1},
 };
 
 /* layout */
@@ -173,7 +171,6 @@ static Key keys[] = {
      * 8 - monero wallet
      * 9 - dogecoin wallet
      * 10 - discord
-     * 11 - slack
      */
     {SUPKEY, XK_t, togglescratch, {.ui = 0}},
     {SUPKEY, XK_f, togglescratch, {.ui = 1}},
@@ -186,7 +183,6 @@ static Key keys[] = {
     {SUPKEY, XK_w, togglescratch, {.ui = 8}},
     {SUPKEY, XK_e, togglescratch, {.ui = 9}},
     {SUPKEY, XK_d, togglescratch, {.ui = 10}},
-    {SUPKEY, XK_s, togglescratch, {.ui = 11}},
     {SUPKEY, XK_z, spawn, SHCMD("zoom")},
     {SUPKEY, XK_v, spawn, SHCMD("openshot-qt")},
     {SUPKEY, XK_g, spawn, SHCMD("gimp")},
