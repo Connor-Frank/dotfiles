@@ -18,5 +18,6 @@ showweather() {
 }
 
 # if forecast is outdated and the computer is connected download a new weather report
-[ "$(stat -c %y "$weatherreport" 2>/dev/null | cut -d' ' -f1)" = "$(date '+%Y-%m-%d')" ] || getforecast
+#[ "$(stat -c %y "$weatherreport" 2>/dev/null | cut -d' ' -f1)" = "$(date '+%Y-%m-%d')" ] || getforecast
+getforecast
 showweather
