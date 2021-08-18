@@ -23,6 +23,12 @@ function tmx {
   tmux attach-session -d -t $name
 };
 
+alias gS='git status'
+alias ga='git add'
+alias gc='git commit -v'
+alias gp='git pull'
+alias gP='git push'
+
 alias clock='tty-clock -s -c -f "%d.%m.%Y"'
 alias textclock='~/sync/scripts/tty-qlock-1.0.0/dist/qlock -on-color green'
 #unalias ls
