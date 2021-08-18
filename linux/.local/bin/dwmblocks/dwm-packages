@@ -3,7 +3,7 @@
 wifistatus="$(cat /sys/class/net/w*/operstate 2>/dev/null)"
 
 name="$(cat /etc/*-release | sed -n 1p)"
-gentoo_name="$(cat /etc/*-release | sed -n 2p)"
+gentoo_name="$(cat /etc/*-release | sed -n 3p)"
 
 if [ "$name" = "NAME=\"Arch Linux\"" ]; then
   if [ "$wifistatus" = "up" ]; then
