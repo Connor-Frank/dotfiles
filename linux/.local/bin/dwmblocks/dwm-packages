@@ -24,7 +24,7 @@ elif [ "$name" = "NAME=\"void\"" ]; then
   package_count="$(xbps-query -l | wc -l)"
   echo " $package_count"
 elif [ "$gentoo_name" = "NAME=Gentoo" ]; then
-  package_count="$(qlist -I | wc -l)"
+  package_count=`expr $(qlist -I | wc -l) + 2`
   echo " $package_count"
 else
   echo "wrong os"
