@@ -2,6 +2,7 @@
 
 
 if [ "$(uname -s)" = "Darwin" ]; then
+  ln -s ~/dotfiles/general/.ideavimrc ~
   ln -s ~/dotfiles/general/.config/* ~/.config
   ln -s ~/dotfiles/general/.vim ~
   ln -s ~/dotfiles/mac/.zshrc ~/.zshrc
@@ -9,6 +10,7 @@ if [ "$(uname -s)" = "Darwin" ]; then
   ln -s ~/dotfiles/mac/.iTerm ~
 else
   ln -sf ~/dotfiles/general/.config/* ~/.config
+  ln -sf ~/dotfiles/general/.ideavimrc ~
   ln -sf ~/dotfiles/general/.vim ~
   ln -sf ~/dotfiles/linux/.zprofile ~/.zprofile
   ln -sf ~/dotfiles/linux/.zshrc ~/.zshrc
