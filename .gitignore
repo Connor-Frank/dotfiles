@@ -10,6 +10,8 @@ Session.vim
 .DS_Store
 *.log
 
+mac/.local/bin
+
 linux/.local/bin/private
 linux/.local/src/blocks/dwmblocks
 linux/.local/src/st/st

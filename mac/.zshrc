@@ -12,6 +12,8 @@ alias s='source ~/.zshrc > /dev/null 2>&1'
 
 alias build-cmake='~/.local/bin/cmake/build-cmake'
 alias run-cmake='~/.local/bin/cmake/run-cmake'
+alias git-update='~/.local/bin/git-update'
+alias git-clean='~/.local/bin/git-clean'
 
 alias pubip='curl ifconfig.me; echo'
 

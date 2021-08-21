@@ -2,6 +2,7 @@
 
 
 if [ "$(uname -s)" = "Darwin" ]; then
+  ln -s ~/dotfiles/linux/.local/bin/* ~/.local/bin
   ln -s ~/dotfiles/general/.ideavimrc ~
   ln -s ~/dotfiles/general/.config/* ~/.config
   ln -s ~/dotfiles/general/.vim ~
