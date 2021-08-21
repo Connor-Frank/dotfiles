@@ -16,7 +16,7 @@ mkdir -p cmake-build-files
 cd cmake-build-files
 # run cmake on the previous directory and make
 if cmake ..; then
-  make
+  make -j9
   cd ..
 else
   cd ..

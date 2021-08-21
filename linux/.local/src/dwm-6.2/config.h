@@ -183,6 +183,7 @@ static Key keys[] = {
     {SUPKEY, XK_w, togglescratch, {.ui = 8}},
     {SUPKEY, XK_e, togglescratch, {.ui = 9}},
     {SUPKEY, XK_d, togglescratch, {.ui = 10}},
+    {SUPKEY, XK_s, spawn, SHCMD("sudo wireshark")},
     {SUPKEY, XK_z, spawn, SHCMD("zoom")},
     {SUPKEY, XK_v, spawn, SHCMD("openshot-qt")},
     {SUPKEY, XK_g, spawn, SHCMD("gimp")},
