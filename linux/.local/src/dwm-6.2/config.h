@@ -61,7 +61,7 @@ static Sp scratchpads[] = {
     /* name, cmd  */
     {"spterm", spcmd0},     {"spranger", spcmd1}, {"spcalc", spcmd2},
     {"keepassxc", spcmd3},  {"ncmpcpp", spcmd4},  {"pulsemixer", spcmd5},
-    {"htop", spcmd6},       {"thunderbird", spcmd7},  {"xmrwallet", spcmd8},
+    {"htop", spcmd6},       {"spmail", spcmd7},  {"xmrwallet", spcmd8},
     {"dogewallet", spcmd9}, {"discord", spcmd10},
 };
 
