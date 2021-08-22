@@ -26,7 +26,7 @@ function tmx {
 alias gS='git status'
 alias ga='git add'
 alias gc='git commit -v'
-alias gl='git pull'
+alias gl='git fetch && git merge --no-edit FETCH_HEAD'
 alias gp='git push'
 
 alias clock='tty-clock -s -c -f "%d.%m.%Y"'
