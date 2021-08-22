@@ -17,7 +17,8 @@ for i in $(find . -name ".git" | cut -c 3-); do
 
     # finally pull
     #git pull origin master;
-    git pull;
+    git fetch;
+    git merge --no-edit FETCH_HEAD;
 
     # lets get back to the CUR_DIR
     cd $CUR_DIR
