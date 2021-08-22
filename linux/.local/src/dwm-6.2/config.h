@@ -52,7 +52,8 @@ const char *spcmd4[] = {"st",     "-n", "spmusic", "-g",
 const char *spcmd5[] = {"st",     "-n", "spmixer",    "-g",
                         "100x25", "-e", "pulsemixer", NULL};
 const char *spcmd6[] = {"st", "-n", "sptop", "-g", "150x40", "-e", "htop"};
-const char *spcmd7[] = {"st", "-n", "spmail", "-g", "150x40", "-e", "neomutt"};
+// const char *spcmd7[] = {"st", "-n", "spmail", "-g", "150x40", "-e", "neomutt"};
+const char *spcmd7[] = {"thunderbird", NULL};
 const char *spcmd8[] = {"monero-wallet-gui", NULL};
 const char *spcmd9[] = {"dogecoin-qt", NULL};
 const char *spcmd10[] = {"discord", NULL};
@@ -60,7 +61,7 @@ static Sp scratchpads[] = {
     /* name, cmd  */
     {"spterm", spcmd0},     {"spranger", spcmd1}, {"spcalc", spcmd2},
     {"keepassxc", spcmd3},  {"ncmpcpp", spcmd4},  {"pulsemixer", spcmd5},
-    {"htop", spcmd6},       {"neomutt", spcmd7},  {"xmrwallet", spcmd8},
+    {"htop", spcmd6},       {"thunderbird", spcmd7},  {"xmrwallet", spcmd8},
     {"dogewallet", spcmd9}, {"discord", spcmd10},
 };
 
@@ -81,7 +82,7 @@ static const Rule rules[] = {
     {NULL, "spmusic", NULL, SPTAG(4), 0, 1, 0, -1},
     {NULL, "spmixer", NULL, SPTAG(5), 0, 1, 0, -1},
     {NULL, "sptop", NULL, SPTAG(6), 0, 1, 0, -1},
-    {NULL, "spmail", NULL, SPTAG(7), 0, 1, 0, -1},
+    {NULL, "thunderbird", NULL, SPTAG(7), 0, 1, 0, -1},
     {NULL, "monero-wallet-gui", NULL, SPTAG(8), 0, 1, 0, -1},
     {NULL, "dogecoin-qt", NULL, SPTAG(9), 0, 1, 0, -1},
     {NULL, "discord", NULL, SPTAG(10), 0, 1, 0, -1},
@@ -167,7 +168,7 @@ static Key keys[] = {
      * 4 - music player
      * 5 - audio mixer
      * 6 - htop
-     * 7 - mail
+     * 7 - mail (thunderbird)
      * 8 - monero wallet
      * 9 - dogecoin wallet
      * 10 - discord
